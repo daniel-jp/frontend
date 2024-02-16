@@ -1,7 +1,10 @@
 import {Typography} from '@mui/material';
 import {Outlet} from 'react-router-dom';
+
 import Root from '../../layout/Root';
 
+
+// index.tsx or main.tsx
 // Service.tsx
 export default function index() {
   return (

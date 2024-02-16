@@ -61,6 +61,8 @@ const Carousel: React.FC = () => {
     autoplaySpeed: 5000,
   };
 
+
+
   return (
     <Slider {...settings}>
       {slides.map((slide, index) => (
@@ -68,7 +70,13 @@ const Carousel: React.FC = () => {
           sx={{
             p: 2,
           }}>
-          <CardMedia component="img"
+          <CardMedia component="img" sx={{
+            '&:hover': {
+              transform: 'scale(1.4)',
+            },
+            transition: 'transform 0.3s ease',
+            opacity: "100%"
+          }}
             height="200px"
             image={slide.image} alt={`Image ${index + 1}`} />
         </Stack>

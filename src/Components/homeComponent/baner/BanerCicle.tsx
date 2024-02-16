@@ -24,23 +24,25 @@ const banerProps = [
 
 export default function Baner() {
   return (
-    <Grid sx={{flexGrow: 1, height: 190}}
+    <Grid sx={{flexGrow: 1, height: 145}}
       gap={2} container justifyContent={"center"} >
       {banerProps.map((value) => (
         <Grid key={value.id} item sx={{
           position: "relative",
-          top: {xs: -50, sm: -70, md: -95, lg: -150},
+          top: {xs: -80, md: -145},
         }}>
-          <Stack borderRadius={"100%"}
+          <Stack 
             sx={{
-              backgroundColor: "#1A202C",
-              height: {xs: 100, sm: 140, md: 190, lg: 300},
-              width: {xs: 100, sm: 140, md: 190, lg: 300},
+
+              height: {xs: 100, md: 240},
+              width: {xs: 100, md: 240},
               alignItems: "center", justifyContent: "center",
               borderRadius: "100%", padding: "4px",
             }}>
             <Avatar sx={{
-              width: "100%", height: "100%"
+              '&:hover': {transform: 'scale(1.1)', },
+              transition: 'transform 0.5s ease',
+              width: "90%", height: "90%"
             }} alt={value.alt} src={`${value.avatar}`} />
           </Stack>
         </Grid>

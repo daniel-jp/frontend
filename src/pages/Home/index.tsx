@@ -13,11 +13,11 @@ import Feature from '../../Components/homeComponent/feature/Feature';
 import MainFeature from '../../Components/homeComponent/feature/MainFeature';
 import Information from '../../Components/homeComponent/information/Information';
 import Root from '../../layout/Root';
-import BannerProps from '../../props/homeProps/BannerProps';
-import FeaturedProps from '../../props/homeProps/FeaturedProps';
-import InformationProp from '../../props/homeProps/InformationProp';
-import MainFeatureProps from '../../props/homeProps/MainFeatureProps';
-import CardProp from '../../props/homeProps/PropsCard';
+import BannerProps from '../../props/home/BannerProps';
+import FeaturedProps from '../../props/home/FeaturedProps';
+import InformationProp from '../../props/home/InformationProp';
+import MainFeatureProps from '../../props/home/MainFeatureProps';
+import CardProp from '../../props/home/PropsCard';
 
 export default function index() {
   const Img = styled('img')({
@@ -36,7 +36,7 @@ export default function index() {
   return (
     <>
       {/*bgcolor={"#122134"}*/}
-      <Box bgcolor="#e3f2fd" sx={{
+      <Box bgcolor="#fff" sx={{
         justifyContent: "center",
       }}>
 
@@ -62,7 +62,7 @@ export default function index() {
           <BanerCicle />
         </Box>
 
-        <Card>
+        <Stack >
           {
             informationP.map((info) => (
               <Information
@@ -73,7 +73,7 @@ export default function index() {
             ))
           }
 
-        </Card>
+        </Stack>
 
 
         {/*<Box
@@ -134,13 +134,16 @@ export default function index() {
               ))}
             </Grid>
 
-            <Card sx={{
+
+
+          </Root>
+          <Card sx={{
               marginTop: {xs: -3, sm: -4, md: -6, lg: -12},
               borderRadius: 0, p: 3
 
             }}>
-
-              <Typography variant="h5" component="div" >
+            <Root>
+              <Typography variant="h5" component="div" mb={4}>
                 PRODUITS FRAIS
               </Typography>
               <Grid container spacing={2} >
@@ -155,9 +158,8 @@ export default function index() {
                     />
                   ))}
               </Grid>
-            </Card>
-
-          </Root>
+            </Root>
+          </Card>
         </Stack>
 
 

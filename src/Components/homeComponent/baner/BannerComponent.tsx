@@ -1,4 +1,6 @@
+import {Stack} from '@mui/material';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Paper from '@mui/material/Paper';
@@ -17,7 +19,7 @@ interface MainFeaturedPostProps {
 export default function BannerComponent({description, image, imageText, linkText, title}: MainFeaturedPostProps) {
 
   return (
-    <Paper
+    <Stack height={["350px", "450px", "600px"]}
       sx={{
         position: 'relative',
         backgroundColor: 'grey.800',
@@ -33,33 +35,36 @@ export default function BannerComponent({description, image, imageText, linkText
       {<img style={{display: 'none'}} src={image} alt={imageText} />}
       <Box
         sx={{
+
           position: 'absolute',
           top: 0,
           bottom: 0,
           right: 0,
           left: 0,
-          backgroundColor: 'rgba(0,0,0,.3)',
+          backgroundColor: 'rgba(0,0,0,.5)',
         }} />
-      <Grid container>
-        <Grid item md={6}>
+      <Grid container >
+        <Grid item md={6} >
           <Box
             sx={{
-              position: 'relative',
+              position: 'relative', textAlign: "start",
               p: {xs: 3, md: 6},
               pr: {md: 0},
             }}>
-            <Typography component="h1" variant="h3" color="inherit" gutterBottom>
+            <Typography fontSize={{xs: 26, md: 50}} sx={{fontWeight: '900'}} component="h1" variant="h3" color="inherit" gutterBottom>
               {title}
             </Typography>
-            <Typography variant="h5" color="inherit" paragraph>
+            <Typography fontSize={{xs: 16, md: 22}} sx={{fontWeight: '600'}} variant="h5" color="inherit" paragraph>
               {description}
             </Typography>
             <Link variant="subtitle1" href="#">
-              {linkText}
+              <Button variant="contained" sx={{bgcolor: "#ab47bc"}}>
+                {linkText}
+              </Button>
             </Link>
           </Box>
         </Grid>
       </Grid>
-    </Paper>
+    </Stack>
   );
 }

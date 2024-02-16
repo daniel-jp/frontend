@@ -1,3 +1,5 @@
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import {Button, CardActions} from '@mui/material';
 import Card from '@mui/material/Card';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
@@ -11,6 +13,7 @@ interface FeaturedPostProps {
     image: string;
     imageLabel: string;
     title: string;
+    btText: string;
   };
 }
 
@@ -19,29 +22,43 @@ export default function Feature(props: FeaturedPostProps) {
   return (
     <div>
       <Grid sx={{
-        position: "relative",
+        position: "relative", boxShadow: 10,
+
         top: {xs: -55, sm: -75, md: -100, lg: -190},
       }}>
-        <CardActionArea component="a" href="#" >
-          <Card sx={{display: 'flex', height: 400}}>
+        <CardActionArea>
+          <Card sx={{display: 'flex', textAlign: 'justify'}}>
             <CardMedia
               component="img"
-              sx={{display: {xs: 'none', sm: 'block', }, width: "50%", }}
+              sx={{
+                display: {xs: 'none', sm: 'block', }, width: "50%", // Adicione o efeito de zoom ao passar o cursor (hover)
+                '&:hover': {
+                  transform: 'scale(1.1)', // Ajuste o valor conforme necessário
+                },
+                transition: 'transform 0.5s ease', // Adiciona uma transição suave ao efeito de zoom
+              }}
               image={post.image}
               alt={post.imageLabel}
             />
             <CardContent sx={{flex: 1, width: "50%", }}>
-              <Typography component="h2" variant="h5">
+              <Typography component="h2" fontSize={{xs: "18px", sm: "22px", md: "32px"}}
+                sx={{flex: 1, fontWeight: 800}}>
                 {post.title}
               </Typography>
 
               <Typography variant="subtitle1" paragraph>
                 {post.description}
               </Typography>
-
+              <CardActions>
+                <Button size="small" variant="contained" color="success" sx={{px: 4, py: 1}}>
+                  {post.btText} <ArrowForwardIcon />
+                </Button>
+              </CardActions>
             </CardContent>
+
           </Card>
         </CardActionArea>
+
       </Grid>
     </div >
   );

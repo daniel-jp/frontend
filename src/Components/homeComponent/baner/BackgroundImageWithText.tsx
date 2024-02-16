@@ -24,7 +24,6 @@ const BackgroundImageWithText: React.FC<BackgroundImageWithTextProps> = ({imageU
       }}>
 
       <Box paddingX={1} sx={{
-
         marginTop: -5, opacity: .5
       }}>
         <Typography fontSize={{xs: 30, md: 50}} sx={{fontWeight: 900}} gutterBottom>

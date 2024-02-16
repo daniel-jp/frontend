@@ -1,3 +1,4 @@
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -58,12 +59,22 @@ function NavBar() {
   return (
     <div>
       <AppBar position="static" sx={{bgcolor: "#09090A"}}>
-        <Toolbar sx={{py: 2, display: 'flex', justifyContent: 'space-between'}}>
-          <Box sx={{display: 'flex', alignItems: 'center'}}>
+        <Toolbar sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          justifyItems: "center",
+          alignContent: "center",
+          textAlign: "center",
+          alignItems: "center"
+        }}>
+          <Stack sx={{
+            display: 'flex',
+            justifyContent: "center",
+          }}>
             {isMobile ? (
               <IconButton
                 size="large"
-                edge="start"
+                edge="start" 
                 color="inherit"
                 aria-label="menu"
                 onClick={handleMobileDrawerOpen}>
@@ -71,18 +82,18 @@ function NavBar() {
               </IconButton>
             ) : null}
             {!isMobile && (
-              <Typography variant="h6" color="inherit" component={Link} to="/">
-                <img src="/public/assets/homeImg/logo/log2.png" alt="Logo" height="50" />
-              </Typography>
+              <Box pt={1} component={Link} to="/">
+                <img src="/public/assets/logo/log2.png" alt="Logo" height="50" />
+              </Box>
             )}
-          </Box>
+          </Stack>
 
-          <Box>
+          <Box sx={{textAlign: "center", pt: 1, my: 2}}>
             {!isMobile &&
               RouteItems.map((item) => (
-                <React.Fragment key={item.id}>
+                <React.Fragment key={item.id} >
                   {!item.children ? (
-                    <Button color="inherit" sx={{fontSize: "md", fontWeight: 600}}
+                    <Button color="inherit" sx={{fontSize: "md", fontWeight: 600, }}
                       component={Link} to={item.path}>
                       {capitalizeFirstAndLast(item.name)}
                     </Button>
@@ -102,6 +113,7 @@ function NavBar() {
                   )}
                 </React.Fragment>
               ))}
+
             <div>
               {isMobile ? null : (
                 <React.Fragment>
@@ -148,6 +160,9 @@ function NavBar() {
               )}
             </div>
           </Box>
+          <IconButton aria-label="add to shopping cart">
+            <AddShoppingCartIcon sx={{fontSize: 32, color: "#fff"}} />
+          </IconButton>
         </Toolbar>
       </AppBar>
 

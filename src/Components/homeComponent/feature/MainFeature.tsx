@@ -9,7 +9,7 @@ interface MainFeaturedPostProps {
 
 }
 
-export default function MainFeature({Img, imageText, text}: MainFeaturedPostProps) {
+export default function MainFeature({Img, imageText}: MainFeaturedPostProps) {
 
 
   return (

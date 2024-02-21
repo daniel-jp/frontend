@@ -1,11 +1,9 @@
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
-import {Box, Grid, Stack, Typography} from '@mui/material';
-import Slider from 'react-slick';
+import {Grid, Stack} from '@mui/material';
 
 import BannerComponent from '../../Components/decouvre/BannerComponent';
-import DecouvCard from '../../Components/decouvre/DecouvCard';
 import DecouvCard1 from '../../Components/decouvre/DecouvCard';
 import DecouvFeatuere from '../../Components/decouvre/DecouvFeatuere';
 import DecouvFeatuereProp from '../../props/DecService/DecouvFeatuereProp';
@@ -13,11 +11,6 @@ import DecouvFeatuereProp from '../../props/DecService/DecouvFeatuereProp';
 // Service.tsx
 export default function index() {
   const decouv = DecouvFeatuereProp();
-
-
-
-
-
 
 
   return (

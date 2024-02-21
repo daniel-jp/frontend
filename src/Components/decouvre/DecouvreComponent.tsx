@@ -253,7 +253,7 @@ const Carousel: React.FC = () => {
 
 
   return (
-    <Slideshow className="slideshow">
+    <Slideshow {...settings} className="slideshow">
       <div className="slides">
         <ArrowBackIosIcon className="arrow-icon left" onClick={handlePrevSlide} />
         {slides.map((slide, index) => (

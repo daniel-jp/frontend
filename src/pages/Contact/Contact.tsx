@@ -1,14 +1,15 @@
-import {Typography} from '@mui/material';
+import {Stack, Typography} from '@mui/material';
 import {Outlet} from 'react-router-dom';
+
+import ContactForm from '../../Components/contact/ContactForm';
 import Root from '../../layout/Root';
 
 // Service.tsx
 export default function Contact() {
   return (
-    <Root>
-      <Typography variant="h4">Contat Page</Typography>
+    <Stack>
 
-
-    </Root>
+      <ContactForm />
+    </Stack>
   )
 }

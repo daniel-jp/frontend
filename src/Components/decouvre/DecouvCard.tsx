@@ -1,130 +1,106 @@
-import {Box, Button, Typography} from '@mui/material';
-import zIndex from '@mui/material/styles/zIndex';
-import {styled} from '@mui/system';
-import React from 'react';
-import {Swiper, SwiperSlide} from 'swiper/react';
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
+
+import {Box, Button, CardMedia, Stack, Typography, useMediaQuery, useTheme} from '@mui/material';
+import Slider from 'react-slick';
 
 import Root from '../../layout/Root';
+import CardDecouvProps from '../../props/DecService/CardDecouvProps';
 
-// Adicionando os estilos para o Swiper
-const StyledSwiper = styled(Swiper)({
-  width: '100%',
-  height: '100%',
-});
+export default function DecouvCard1() {
 
-// Adicionando os estilos para o SwiperSlide
-const StyledSwiperSlide = styled(SwiperSlide)({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  position: 'relative',
-  margin: 4,
-});
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
-// Adicionando os estilos para a imagem no SwiperSlide
-const StyledImage = styled('img')({
-  display: 'block',
-  width: '100%',
-  height: '60%',
-  opacity: 1,
-});
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 200,
+    slidesToShow: isMobile ? 1 : 3,
+    slidesToScroll: 2,
+    autoplay: true,
+    autoplaySpeed: 5000,
+  };
+
+  const cardDecouv = CardDecouvProps();
 
 
-interface DecouvCardProps {
-  images: {src: string; title: string; alt: string}[];
-}
-
-const DecouvCard: React.FC<DecouvCardProps> = ({images}) => {
   return (
     <div>
-      <Box sx={{
+      <Stack sx={{
         height: '100%',
         imageRendering: "optimizeQuality",
-        background: '#000',
-        pb: 8,
+        pb: 4,
+        textAlign: "center",
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         backgroundImage: 'url("/public/assets/decouvre/carv.jpg")',
-        textAlign: "center"
-      }}>
 
+      }}>
         <Root>
-          <Typography
-            sx={{
-              pt: 10, pb: 8,
-              fontSize: {xs: 16, sm: 18, md: 22, lg: 32},
-              fontWeight: '800',
-              fontFamily: "Oswald, sans-serif",
-              textTransform: 'uppercase',
-              letterSpacing: '0.30em',
-              color: '#fff'
-            }}>
+          <Box sx={{px: 2}}>
+            <Typography
+              sx={{
+                pt: 10, pb: 8, px: 1,
+                fontSize: {xs: 16, sm: 22, md: 44},
+                fontWeight: '800',
+                fontFamily: "Oswald, sans-serif",
+                textTransform: 'uppercase',
+                letterSpacing: '0.30em',
+                color: '#fff', backgroundColor: 'rgba(0, 0, 0, 0.2)',
+
+              }}>
             DÉCOUVREZ NOTRE GAMME DE PRODUITS
           </Typography>
-          <StyledSwiper
-            slidesPerView={1}
-            centeredSlides={false}
-            slidesPerGroupSkip={1}
-            grabCursor={true}
-            keyboard={{
-              enabled: true,
-            }}
-            breakpoints={{
-              769: {
-                slidesPerView: 3,
-                slidesPerGroup: 3,
-              },
-            }}
-            scrollbar={true}
-            navigation={true}
-            pagination={{
-              clickable: true,
-            }}
-            className="mySwiper">
-            {images.map((image, index) => (
-              <StyledSwiperSlide key={index}>
+            <Slider {...settings} >
 
-                <StyledImage src={image.src} alt={image.alt} />
+              {cardDecouv.map((slide, index) => (
+                <Stack key={index} sx={{p: 2, }}>
 
-                <Typography
-                  sx={{
-                    textAlign: 'center',
-                    position: 'absolute', color: '#fff',
-                    top: {xs: 90, sm: 100, md: 100, lg: 170},
-                    fontSize: {xs: '12px', sm: '16px', md: '22px'},
-                    fontWeight: '900'
-                  }}>
-                  {image.title}
-                </Typography>
+                  <CardMedia component="img" sx={{
+                    width: '100%',
+                    height: '60%',
+                    '&:hover': {
+                      cursor: 'auto',
+                      backgroundImage: 'rgba(250, 0, 0, 0.8)',
+                      opacity: 0.9,
+                      //  transform: 'scale(1.0)',
+                    },
+                    transition: 'transform 0.3s ease',
+                    opacity: "100%"
+                  }}
+
+                    image={slide.src} alt={`Image ${index + 1}`}
+                  />
                 <Button
-                  variant="outlined"
+
                   sx={{
-                    position: 'absolute',
-                    textAlign: 'center',
+                      mt: {xs: -40, sm: -40, md: -60},
                     textDecoration: 'none',
                     background: 'transparent',
                     border: '2px solid #e1e1e1',
-                    font: "12px/1.2 'Oswald', sans-serif",
+                      fontFamily: "'Oswald', sans-serif",
+                      fontSize: {xs: '12px', sm: '16px', md: '22px'},
                     letterSpacing: '0.4em',
                     textIndent: '2px', color: '#fff',
-                    fontWeight: "800",
+                      fontWeight: "900",
                     textTransform: 'uppercase',
                     transition: 'color 0.1s linear 0.05s',
-                    '&::after': {
-                      transition: 'border 0.1s linear 0.05s',
-                    },
+                      backgroundColor: 'rgba(0, 0, 0, 0.4)',
+
                     '&:hover': {
                       transition: 'color 0.1s linear 0s',
+                      backgroundColor: 'rgba(10, 50, 50, 0.8)',
 
-                      '&::before': {
+
+                      '&:before': {
                         top: 0,
                         height: '100%',
                         opacity: 1,
                         transition: 'height 0.2s ease, top 0.2s ease, opacity 0s linear 0s',
                       },
-                      '&::after': {
+                      '&:after': {
                         borderColor: '#373737',
                         transition: 'border 0.1s linear 0s',
                       },
@@ -133,13 +109,28 @@ const DecouvCard: React.FC<DecouvCardProps> = ({images}) => {
                 >
                   Voir plus
                 </Button>
-              </StyledSwiperSlide>
+                  <Typography
+                    sx={{
+                      px: 2, mt: -2,
+                      position: "sticky", color: '#fff',
+                      fontSize: {xs: '12px', sm: '16px', md: '20px'},
+                      backgroundColor: 'rgba(9, 0, 0, 0.8)',
+                      fontWeight: '900',
+                      '&:hover': {
+                        transition: 'color 0.1s linear 0s',
+                        backgroundColor: 'rgba(10, 50, 50, 0.8)',
+                      },
+                      width: "100%",
+                      py: 1
+                    }}>
+                    {slide.title}
+                  </Typography>
+                </Stack>
             ))}
-          </StyledSwiper>
+            </Slider>
+          </Box>
         </Root>
-      </Box>
+      </Stack>
     </div >
-  );
-};
-
-export default DecouvCard;
+  )
+}

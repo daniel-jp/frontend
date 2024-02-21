@@ -1,7 +1,11 @@
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
+
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import {Box, Grid, Stack} from '@mui/material';
+import {Box, Grid, Stack, useMediaQuery, useTheme} from '@mui/material';
 import React, {useEffect, useState} from 'react';
+import Slider from 'react-slick';
 import styled from 'styled-components';
 
 interface Slide {
@@ -42,6 +46,22 @@ const slides: Slide[] = [
 const Carousel: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 200,
+    slidesToShow: isMobile ? 1 : 3,
+    slidesToScroll: 2,
+    autoplay: true,
+    autoplaySpeed: 5000,
+  };
+
+
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
@@ -58,9 +78,6 @@ const Carousel: React.FC = () => {
     setCurrentSlide((prevSlide) => (prevSlide === slides.length - 1 ? 0 : prevSlide + 1));
   };
 
-  const handleSlideClick = (index: number) => {
-    setCurrentSlide(index);
-  };
 
   const Slideshow = styled.div`
     overflow: hidden;
@@ -75,7 +92,7 @@ const Carousel: React.FC = () => {
     .slides {
       position: absolute;
       top: 0;
-      left: 0;
+      left: 0; 
       width: 100%;
       height: 100%;
       z-index: 1;
@@ -91,7 +108,7 @@ const Carousel: React.FC = () => {
         z-index: 1;
         opacity: 0;
         transition: opacity 0.3s ease;
-        
+       
         &.is-active {
           display: block;
         }
@@ -140,15 +157,15 @@ const Carousel: React.FC = () => {
         }
 
         .title {
-          margin-bottom: 15px;
+          margin-bottom: 12px;
           max-width: 1000px;
-          font: 800 30px/1.8 'Oswald', sans-serif;
-          letter-spacing: 0.30em;
+          font: 800 30px/1.8 'Oswald',sans-serif;
+          letter-spacing: 0.28em;
           text-transform: uppercase;
         }
 
         .text {
-          margin-bottom: 15px;
+          margin-bottom: 12px;
           max-width: 1000px;
           font-size: 18px;
           line-height: 1.4;
@@ -232,6 +249,9 @@ const Carousel: React.FC = () => {
       }
     }
   `;
+
+
+
 
   return (
     <Slideshow className="slideshow">

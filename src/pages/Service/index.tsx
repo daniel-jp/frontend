@@ -1,36 +1,40 @@
 import 'slick-carousel/slick/slick-theme.css';
 import 'slick-carousel/slick/slick.css';
 
-import {Grid, Stack, Typography} from '@mui/material';
+import {Box, Grid, Stack, Typography} from '@mui/material';
+import Slider from 'react-slick';
 
+import BannerComponent from '../../Components/decouvre/BannerComponent';
 import DecouvCard from '../../Components/decouvre/DecouvCard';
+import DecouvCard1 from '../../Components/decouvre/DecouvCard';
 import DecouvFeatuere from '../../Components/decouvre/DecouvFeatuere';
 import DecouvreComponent from '../../Components/decouvre/DecouvreComponent';
-import Root from '../../layout/Root';
-import CardDecouv from '../../props/DecService/CardDecouv';
+import BannerProp from '../../props/DecService/BannerProp';
+import CardDecouv from '../../props/DecService/CardDecouvProps';
+import CardDecouvProps from '../../props/DecService/CardDecouvProps';
 import DecouvFeatuereProp from '../../props/DecService/DecouvFeatuereProp';
 
 // Service.tsx
 export default function index() {
   const decouv = DecouvFeatuereProp();
-  const cardDecouv = CardDecouv();
+  const cardDecouv = CardDecouvProps();
 
-  const bannerItems = [
-    {
-      title: 'Item 1',
-      imageUrl: '/public/assets/decouvre/boi.jpg'
-    },
-    {
-      title: 'Item 2',
-      imageUrl: '/public/assets/decouvre/fgg.jpg'
-    },
-    // Adicione mais itens conforme necessário
-  ];
+
+  const sliderProps = BannerProp();
+
+
+
+
+
   return (
     <div>
-      <Stack>
-        <DecouvreComponent />
+
+      <Stack sx={{overflow: 'hidden', }}>
+        <BannerComponent />
       </Stack>
+      {/* <Stack>
+        <DecouvreComponent />
+  </Stack>*/}
 
       <Grid py={5}>
         {
@@ -50,20 +54,9 @@ export default function index() {
 
       {/*<Typography variant="h4">Service Page</Typography>
         */}
-      <div>
-        <DecouvCard images={[
-          {src: '/public/assets/decouvre/card1.jpg', title: 'imag1', alt: 'Page 1'},
-          {src: '/public/assets/decouvre/beefred.jpg', title: 'imag2', alt: 'Page 2'},
-          {src: '/public/assets/decouvre/Saucisse.jpg', title: 'imag3', alt: 'Page 3'},
-          {src: '/public/assets/decouvre/saus.jpg', title: 'imag4', alt: 'Page 4'},
-          {src: '/public/assets/decouvre/card1.jpg', title: 'imag5', alt: 'Page 5'},
-          {
-            src: '/public/assets/decouvre/card3.jpg', title: 'Delícias variadas',
-            alt: 'Page 6'
-          },
-          // Adicione mais imagens conforme necessário
-        ]} />
-      </div>
+      <Stack>
+        <DecouvCard1 />
+      </Stack>
 
 
     </div>

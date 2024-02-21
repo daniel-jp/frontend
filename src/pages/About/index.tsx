@@ -1,4 +1,4 @@
-import {Box, Card, CardActionArea, CardContent, Grid, Stack, Typography} from '@mui/material';
+import {Box, Grid, Stack} from '@mui/material';
 
 import AboutComp from '../../Components/aboutComponent/AboutComp';
 import AboutFeatuere from '../../Components/aboutComponent/AboutFeatuere';

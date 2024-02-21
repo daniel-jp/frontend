@@ -1,4 +1,4 @@
-import {Box, Button, Card, CardActions, CardContent, CardMedia, Grid, Typography} from '@mui/material';
+import {Card, CardActions, CardContent, CardMedia, Grid, Typography} from '@mui/material';
 import React from 'react';
 
 interface SubCardProps {

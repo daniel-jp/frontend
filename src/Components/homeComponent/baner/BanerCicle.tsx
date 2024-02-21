@@ -1,4 +1,4 @@
-import {Avatar, Box, Grid, Stack} from '@mui/material';
+import {Avatar, Grid, Stack} from '@mui/material';
 
 const banerProps = [
 

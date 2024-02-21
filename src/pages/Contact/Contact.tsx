@@ -1,8 +1,6 @@
-import {Stack, Typography} from '@mui/material';
-import {Outlet} from 'react-router-dom';
+import {Stack} from '@mui/material';
 
 import ContactForm from '../../Components/contact/ContactForm';
-import Root from '../../layout/Root';
 
 // Service.tsx
 export default function Contact() {

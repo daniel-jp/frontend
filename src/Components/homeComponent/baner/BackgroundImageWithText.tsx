@@ -1,6 +1,5 @@
-import {Avatar, Box, Grid, Stack, Typography} from '@mui/material';
+import {Box, Stack, Typography} from '@mui/material';
 
-import BanerCicle from './BanerCicle';
 
 
 interface BackgroundImageWithTextProps {

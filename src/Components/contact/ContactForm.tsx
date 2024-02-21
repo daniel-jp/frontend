@@ -1,11 +1,10 @@
 import {Facebook, Instagram, Twitter} from '@mui/icons-material';
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
-import {Box, Button, Divider, Grid, Link, Paper, Stack, TextField, Typography} from '@mui/material';
+import {Box, Button, Divider, Grid, Link, Stack, TextField, Typography} from '@mui/material';
 import {GoogleMap, LoadScript, Marker} from '@react-google-maps/api';
-import React, {useState} from 'react';
+import {useState} from 'react';
 
-import Root from '../../layout/Root';
 
 const containerStyle = {
   width: '100%',

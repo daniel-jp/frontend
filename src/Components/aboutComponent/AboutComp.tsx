@@ -1,9 +1,7 @@
-import {Stack} from '@mui/material';
+import {Stack, Typography} from '@mui/material';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
-import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
 import * as React from 'react';
 
 import Root from '../../layout/Root';

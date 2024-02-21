@@ -55,7 +55,6 @@ export default function Feature(props: FeaturedPostProps) {
                 </Button>
               </CardActions>
             </CardContent>
-
           </Card>
         </CardActionArea>
 

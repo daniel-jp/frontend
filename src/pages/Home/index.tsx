@@ -2,9 +2,8 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
-import {Box, Card, Grid, Stack, styled, Typography} from '@mui/material';
+import {Box, Card, Grid, Stack, Typography} from '@mui/material';
 
-import BackgroundImageWithText from '../../Components/homeComponent/baner/BackgroundImageWithText';
 import BanerCicle from '../../Components/homeComponent/baner/BanerCicle';
 import BannerComponent from '../../Components/homeComponent/baner/BannerComponent';
 import HomeCardComp from '../../Components/homeComponent/card-home/HomeCardComp';
@@ -20,12 +19,7 @@ import MainFeatureProps from '../../props/home/MainFeatureProps';
 import CardProp from '../../props/home/PropsCard';
 
 export default function index() {
-  const Img = styled('img')({
-    margin: 'auto',
-    display: 'block',
-    maxWidth: '100%',
-    maxHeight: '100%',
-  });
+
 
   const homeCard = CardProp();
   const featureProp = FeaturedProps();
@@ -171,7 +165,6 @@ export default function index() {
         <Stack sx={{
           bgcolor: "#F7FAFC", marginTop: 10, p: 6,
         }} >
-
 
           <Root>
             <Carousel />

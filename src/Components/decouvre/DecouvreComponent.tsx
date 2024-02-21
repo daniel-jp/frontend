@@ -5,7 +5,6 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import {Box, Grid, Stack, useMediaQuery, useTheme} from '@mui/material';
 import React, {useEffect, useState} from 'react';
-import Slider from 'react-slick';
 import styled from 'styled-components';
 
 interface Slide {

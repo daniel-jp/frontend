@@ -1,12 +1,10 @@
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import FlatwareIcon from '@mui/icons-material/Flatware';
-import MarkUnreadChatAltIcon from '@mui/icons-material/MarkUnreadChatAlt';
 import {Stack} from '@mui/material';
 import Card from '@mui/material/Card';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 
 interface FeaturedPostProps {

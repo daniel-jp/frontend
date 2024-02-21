@@ -30,7 +30,6 @@ function capitalizeFirstAndLast(str: string) {
 }
 
 function NavBar() {
-  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
   const [serviceSubMenuOpen, setServiceSubMenuOpen] = useState(false);
 

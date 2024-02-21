@@ -8,19 +8,13 @@ import BannerComponent from '../../Components/decouvre/BannerComponent';
 import DecouvCard from '../../Components/decouvre/DecouvCard';
 import DecouvCard1 from '../../Components/decouvre/DecouvCard';
 import DecouvFeatuere from '../../Components/decouvre/DecouvFeatuere';
-import DecouvreComponent from '../../Components/decouvre/DecouvreComponent';
-import BannerProp from '../../props/DecService/BannerProp';
-import CardDecouv from '../../props/DecService/CardDecouvProps';
-import CardDecouvProps from '../../props/DecService/CardDecouvProps';
 import DecouvFeatuereProp from '../../props/DecService/DecouvFeatuereProp';
 
 // Service.tsx
 export default function index() {
   const decouv = DecouvFeatuereProp();
-  const cardDecouv = CardDecouvProps();
 
 
-  const sliderProps = BannerProp();
 
 
 

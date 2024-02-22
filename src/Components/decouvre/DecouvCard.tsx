@@ -92,8 +92,6 @@ export default function DecouvCard1() {
                     '&:hover': {
                       transition: 'color 0.1s linear 0s',
                       backgroundColor: 'rgba(10, 50, 50, 0.8)',
-
-
                       '&:before': {
                         top: 0,
                         height: '100%',

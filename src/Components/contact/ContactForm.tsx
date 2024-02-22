@@ -1,6 +1,7 @@
 import {Facebook, Instagram, Twitter} from '@mui/icons-material';
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
+import PersonPinCircleIcon from '@mui/icons-material/PersonPinCircle';
 import {Box, Button, Divider, Grid, Link, Stack, TextField, Typography} from '@mui/material';
 import {GoogleMap, LoadScript, Marker} from '@react-google-maps/api';
 import {useState} from 'react';
@@ -36,9 +37,6 @@ const ContactForm = () => {
     <Stack sx={{color: "#000"}}>
 
       <Grid container spacing={2} sx={{mt: 8, mb: 3, borderRadius: 0, }}>
-
-
-
         <Grid item xs={12} md={6} sx={{borderRadius: 0, height: "100%"}}>
 
           <Box style={{padding: '20px'}}>
@@ -52,7 +50,7 @@ const ContactForm = () => {
               <CallIcon /> (+212) 618675431 & (+212) 518675431
             </Typography>
             <Typography variant="body1" gutterBottom>
-              <CallIcon /> Siga-nos nas redes sociais
+              <PersonPinCircleIcon /> Maroc 117 rue Lafayette, 76000 Rouen rive-gauche
             </Typography>
             <Typography variant='h5' sx={{mt: 4}} gutterBottom>
               Suivez-nous sur les réseaux sociaux

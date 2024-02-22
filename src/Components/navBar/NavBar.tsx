@@ -1,4 +1,5 @@
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import MenuIcon from '@mui/icons-material/Menu';
@@ -17,7 +18,6 @@ import {
   Stack,
   Theme,
   Toolbar,
-  Typography,
   useMediaQuery,
 } from '@mui/material';
 import React, {useState} from 'react';
@@ -128,15 +128,26 @@ function NavBar() {
                       width={"full"}
                       direction="row"
                       divider={<Divider orientation="vertical" flexItem />}
-                      spacing={2}
                     >
-                      <List sx={{bgcolor: "gray", width: "100%"}}>
+                      <List sx={{backgroundColor: '#171923', width: "100%", pt: 4}}>
                         {RouteItems.find((item) => item.id === 3)?.children?.map((subItem) => (
                           <ListItem
                             key={subItem.name}
                             component={Link}
+                            sx={{
+                              ml: 2,
+                              textDecoration: "none", color: '#718096',
+                              textTransform: 'uppercase', fontWeight: 900, width: '92%',
+
+                              '&:hover': {
+                                backgroundColor: 'rgba(12, 0, 10, 0.4)',
+                                color: "#EDF2F7",
+                                transform: 'scale(1.1)',
+                              }, transition: 'transform 0.3s ease',
+                            }}
                             to={`/produit/${subItem.path}`}
                             onClick={() => setServiceSubMenuOpen(false)}>
+                            <ArrowForwardIcon />
                             <ListItemText primary={subItem.name} />
                           </ListItem>
                         ))}
@@ -147,12 +158,16 @@ function NavBar() {
                           bgcolor: "#171923",
                           width: "100%",
                           alignItems: "center",
+                          height: '100%',
+                          imageRendering: "optimizeQuality",
+                          textAlign: "center",
+                          backgroundSize: 'cover',
+                          backgroundRepeat: 'no-repeat',
+                          backgroundPosition: 'center',
+                          backgroundImage: 'url("/dist/assets/menu/frango-açado3.jpg")',
                         }}
-                      >
-                        <Typography textAlign={"center"} variant="h2" color={"white"}>
-                          IMAGE
-                        </Typography>
-                      </Box>
+                      />
+
                     </Stack>
                   </Drawer>
                 </React.Fragment>
@@ -170,7 +185,7 @@ function NavBar() {
         anchor="left"
         open={mobileDrawerOpen}
         onClose={handleMobileDrawerClose}
-        sx={{bgcolor: "#171923"}}>
+        sx={{bgcolor: "#fff"}}>
 
         <List>
           {RouteItems.map((item) => (
@@ -195,10 +210,10 @@ function NavBar() {
                         {item.children.map((subItem) => (
                           <ListItem
                             key={subItem.name}
-                            component={Link}
+                            component={Link} 
                             to={`/produit/${subItem.path}`}
-                            onClick={handleMobileDrawerClose}
-                          >
+                            onClick={handleMobileDrawerClose}>
+
                             <ListItemText primary={subItem.name} />
                           </ListItem>
                         ))}

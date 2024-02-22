@@ -56,7 +56,7 @@ const AboutComp: React.FC<PropAbout> = ({description, description2, image, image
         }}>
           <Grid item md={6} sx={{
             // backgroundColor: 'rgba(0, 0, 0, 0.5)',
-            textAlign: "justify", display: {xs: "grid", md: "flex"},
+            textAlign: "justify", textWrap: 'pretty', display: {xs: "grid", md: "flex"},
 
           }}>
             <Box

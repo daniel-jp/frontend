@@ -183,7 +183,7 @@ const Carousel: React.FC = () => {
                 }}>{slide.description}</Typography>
                 <Button className='btn' sx={{
                   textTransform: 'uppercase',
-                  transition: 'color 0.1s linear 0.05s', px: 5, py: 2,
+                  transition: 'color 0.1s linear 0.05s', px: 2, py: 2,
 
                 }} >
                   <Typography className='text' sx={{

@@ -11,38 +11,38 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: '/public/assets/homeImg/carousel/im3.png',
+    image: '/dist/assets/homeImg/carousel/im3.png',
   },
   {
-    image: '/public/assets/homeImg/carousel/im5.png',
+    image: '/dist/assets/homeImg/carousel/im5.png',
   },
   {
-    image: '/public/assets/homeImg/carousel/im6.png',
+    image: '/dist/assets/homeImg/carousel/im6.png',
 
   },
   {
-    image: '/public/assets/homeImg/carousel/Imagem8.png',
+    image: '/dist/assets/homeImg/carousel/Imagem8.png',
 
   },
 
   {
-    image: '/public/assets/homeImg/carousel/Imagem9.png',
+    image: '/dist/assets/homeImg/carousel/Imagem9.png',
   },
   {
-    image: '/public/assets/homeImg/carousel/car5.png',
+    image: '/dist/assets/homeImg/carousel/car5.png',
 
   },
   {
-    image: '/public/assets/homeImg/carousel/car2.png',
+    image: '/dist/assets/homeImg/carousel/car2.png',
   },
   {
-    image: '/public/assets/homeImg/carousel/car3.png',
+    image: '/dist/assets/homeImg/carousel/car3.png',
   },
   {
-    image: '/public/assets/homeImg/carousel/car4.png',
+    image: '/dist/assets/homeImg/carousel/car4.png',
   },
   {
-    image: '/public/assets/homeImg/carousel/Imagem19.png',
+    image: '/dist/assets/homeImg/carousel/Imagem19.png',
   },
 
 ];

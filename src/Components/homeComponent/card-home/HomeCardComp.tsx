@@ -18,7 +18,7 @@ const HomeCardComp: React.FC<SubCardProps> = ({title, content, image, price}) =>
           transform: "scale(1.1)",
           filter: "opacity(1.5)",
         }, boxShadow: 4
-      }} >
+      }}>
         <CardMedia component="img" height={150} image={image} alt={title}
           sx={{// Adicione o efeito de zoom ao passar o cursor (hover)
             '&:hover': {

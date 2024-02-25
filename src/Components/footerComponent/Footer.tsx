@@ -1,10 +1,8 @@
-import GitHubIcon from '@mui/icons-material/GitHub';
+import FacebookTwoToneIcon from '@mui/icons-material/FacebookTwoTone';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import {Box, Divider, Grid, IconButton, Link, Typography} from '@mui/material';
+import {Box, Divider, Grid, IconButton, Link, Stack, Typography} from '@mui/material';
 import React from 'react';
-
-import Root from '../../layout/Root';
 
 const Footer: React.FC = () => {
   return (
@@ -19,8 +17,8 @@ const Footer: React.FC = () => {
       }}
     >
 
-      <Root>
-        <Grid container sx={{justifyContent: "space-between"}}>
+      <Stack>
+        <Grid container sx={{justifyContent: "space-between", p: 2}}>
           {/* Logo */}
           <Grid item xs={12} sm={6} md={2} sx={{mb: 2}}>
             <img src="../../../public/assets/logo/log1.png" alt="Logo" height="50" />
@@ -70,15 +68,15 @@ const Footer: React.FC = () => {
 
         </Grid>
 
-      </Root>
+      </Stack>
       <Divider sx={{my: 2, border: "1px solid #F7FAFC"}} />
 
       {/* Social Media Icons */}
       <IconButton sx={{color: "#2F855A"}} component={Link} href="https://github.com/" target="_blank">
-        <GitHubIcon />
+        <FacebookTwoToneIcon />
       </IconButton>
       <IconButton sx={{color: "#2F855A"}} component={Link} href="https://twitter.com/" target="_blank">
-        <TwitterIcon />
+        <InstagramIcon />
       </IconButton>
       <IconButton sx={{color: "#2F855A"}} component={Link} href="https://www.linkedin.com/" target="_blank">
         <LinkedInIcon />

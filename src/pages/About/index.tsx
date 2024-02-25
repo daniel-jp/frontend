@@ -23,7 +23,7 @@ export default function index() {
               description2={about.description2}
               image={about.image}
               imageText={about.imageText}
-              linkText={about.linkText}
+
             />
           ))
         }

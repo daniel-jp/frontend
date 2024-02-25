@@ -15,16 +15,30 @@ export const RouteItems = [
     path: "/produit",
     children: [
       {
-        name: "Viande & Surgelés Pur Boeuf",
-        path: "viande",
+        name: "Viandes bovines",
+        path: "bovines",
       },
       {
-        name: "Produits Frais",
-        path: "frais",
+        name: "Viandes de volailles",
+        path: "volailles",
       },
       {
-        name: "Produits Gourmands Surgelés",
+        name: "Gamme gourmande",
         path: "gourmands",
+      },
+      ,
+      {
+        name: "Toppings de volailles",
+        path: "toppings",
+      },
+      ,
+      {
+        name: "Charcuterie",
+        path: "charcuteries",
+      },
+      {
+        name: "Saucisse Goût",
+        path: "saucisses",
       },
     ],
   },

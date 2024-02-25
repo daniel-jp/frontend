@@ -12,14 +12,16 @@ const HomeCardComp: React.FC<SubCardProps> = ({title, content, image, price}) =>
   return (
     <Grid item xs={12} sm={6} md={3}>
       <Card sx={{
-        borderRadius: '0', ":hover": {
+        borderRadius: '0',
+        ":hover": {
           cursor: "pointer",
           color: "#2D3748",
-          transform: "scale(1.1)",
-          filter: "opacity(1.5)",
-        }, boxShadow: 4
+          boxShadow: 8,
+          //transform: "scale(1.1)",
+          // filter: "opacity(1.5)",
+        }, boxShadow: -0
       }}>
-        <CardMedia component="img" height={150} image={image} alt={title}
+        <CardMedia component="img" height={200} image={image} alt={title}
           sx={{// Adicione o efeito de zoom ao passar o cursor (hover)
             '&:hover': {
               transform: 'scale(1.1)', // Ajuste o valor conforme necessário
@@ -35,13 +37,9 @@ const HomeCardComp: React.FC<SubCardProps> = ({title, content, image, price}) =>
           </Typography>
 
         </CardContent>
-        <CardActions>
-          <Typography sx={{color: "#718096"}} fontWeight={400} variant="body2">
-            £\kg
-          </Typography>
-          <Typography fontWeight={400}
-            variant="body2" color="red">
-            {price}
+        <CardActions disableSpacing>
+          <Typography pb={1} fontSize="lg" fontWeight="400">
+            £{price}
           </Typography>
         </CardActions>
       </Card >

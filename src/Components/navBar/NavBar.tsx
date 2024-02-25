@@ -18,6 +18,7 @@ import {
   Stack,
   Theme,
   Toolbar,
+  Typography,
   useMediaQuery,
 } from '@mui/material';
 import React, {useState} from 'react';
@@ -121,8 +122,7 @@ function NavBar() {
                     open={serviceSubMenuOpen}
                     onClose={() => setServiceSubMenuOpen(false)}
                     onMouseOver={handleServiceMouseOver}
-                    onMouseLeave={handleServiceMouseLeave}
-                  >
+                    onMouseLeave={handleServiceMouseLeave}>
                     <Stack
                       height={400}
                       width={"full"}
@@ -132,12 +132,13 @@ function NavBar() {
                       <List sx={{backgroundColor: '#171923', width: "100%", pt: 4}}>
                         {RouteItems.find((item) => item.id === 3)?.children?.map((subItem) => (
                           <ListItem
-                            key={subItem.name}
+                            key={subItem?.name}
                             component={Link}
                             sx={{
                               ml: 2,
                               textDecoration: "none", color: '#718096',
-                              textTransform: 'uppercase', fontWeight: 900, width: '92%',
+                              textTransform: 'uppercase', width: '92%',
+                              justifyContent: 'space-between',
 
                               '&:hover': {
                                 backgroundColor: 'rgba(12, 0, 10, 0.4)',
@@ -145,10 +146,13 @@ function NavBar() {
                                 transform: 'scale(1.1)',
                               }, transition: 'transform 0.3s ease',
                             }}
-                            to={`/produit/${subItem.path}`}
+                            to={`/produit/${subItem?.path}`}
                             onClick={() => setServiceSubMenuOpen(false)}>
+
+                            <Typography sx={{fontWeight: "600", fontSize: 16}}>
+                              {subItem?.name}
+                            </Typography>
                             <ArrowForwardIcon />
-                            <ListItemText primary={subItem.name} />
                           </ListItem>
                         ))}
                       </List>
@@ -164,7 +168,7 @@ function NavBar() {
                           backgroundSize: 'cover',
                           backgroundRepeat: 'no-repeat',
                           backgroundPosition: 'center',
-                          backgroundImage: 'url("/dist/assets/menu/frango-açado3.jpg")',
+                          backgroundImage: 'url("/public/assets/menu/beef-grelhado1.jpg")',
                         }}
                       />
 
@@ -209,12 +213,13 @@ function NavBar() {
                       <List>
                         {item.children.map((subItem) => (
                           <ListItem
-                            key={subItem.name}
+                            key={subItem?.name}
                             component={Link} 
-                            to={`/produit/${subItem.path}`}
-                            onClick={handleMobileDrawerClose}>
+                            to={`/produit/${subItem?.path}`}
+                            onClick={handleMobileDrawerClose}
+                            sx={{textDecoration: "none", color: '#2D3748', }}>
 
-                            <ListItemText primary={subItem.name} />
+                            <ListItemText sx={{ml: 2, }}>{subItem?.name}</ListItemText>
                           </ListItem>
                         ))}
                       </List>

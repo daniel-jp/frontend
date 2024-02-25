@@ -1,6 +1,8 @@
-import {Facebook, Instagram, Twitter} from '@mui/icons-material';
 import CallIcon from '@mui/icons-material/Call';
 import EmailIcon from '@mui/icons-material/Email';
+import FacebookTwoToneIcon from '@mui/icons-material/FacebookTwoTone';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import PersonPinCircleIcon from '@mui/icons-material/PersonPinCircle';
 import {Box, Button, Divider, Grid, Link, Stack, TextField, Typography} from '@mui/material';
 import {GoogleMap, LoadScript, Marker} from '@react-google-maps/api';
@@ -39,17 +41,17 @@ const ContactForm = () => {
       <Grid container spacing={2} sx={{mt: 8, mb: 3, borderRadius: 0, }}>
         <Grid item xs={12} md={6} sx={{borderRadius: 0, height: "100%"}}>
 
-          <Box style={{padding: '20px'}}>
+          <Box style={{padding: '20px', alignItems: "center"}}>
             <Typography variant="h5" gutterBottom>
               Contactez-nous
             </Typography>
-            <Typography variant="body1" sx={{textAlign: ""}} gutterBottom>
+            <Typography variant="body1" sx={{justifyContent: "flex-end"}} gutterBottom>
               <EmailIcon />  achahada@acha.fr & achahada@gmail.com
             </Typography>
-            <Typography variant='body1' gutterBottom>
+            <Typography variant='body1' sx={{textAlign: "justify"}} gutterBottom >
               <CallIcon /> (+212) 618675431 & (+212) 518675431
             </Typography>
-            <Typography variant="body1" gutterBottom>
+            <Typography variant="body1" sx={{textAlign: "justify"}} gutterBottom>
               <PersonPinCircleIcon /> Maroc 117 rue Lafayette, 76000 Rouen rive-gauche
             </Typography>
             <Typography variant='h5' sx={{mt: 4}} gutterBottom>
@@ -57,14 +59,15 @@ const ContactForm = () => {
             </Typography>
             <Grid container spacing={2} >
               <Grid item sx={{color: "#000"}} component={Link} href="https://twitter.com/" target="_blank">
-                <Facebook />
+                <FacebookTwoToneIcon />
               </Grid>
               <Grid item sx={{color: "#000"}} component={Link} href="https://twitter.com/" target="_blank">
-                <Instagram />
+                <InstagramIcon />
               </Grid>
               <Grid item sx={{color: "#000"}} component={Link} href="https://twitter.com/" target="_blank">
-                <Twitter />
+                <LinkedInIcon />
               </Grid>
+
             </Grid>
           </Box>
         </Grid>

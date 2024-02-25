@@ -27,7 +27,40 @@ export default function PropsCard() {
       title: "Poulet",
       content: "Poulet Pac Entier (Poids Moyen Du Poulet: 1.75 Kg)",
       price: "8.90"
-    }
+    },
+
+    {
+
+      image: "../../../public/assets/homeImg/cardImg/viande-fraîche1.jpg",
+      title: "Steak rouge",
+      content: "bœuf de 1.75 Kg",
+      price: "93.90"
+    },
+
+    {
+
+      image: "../../../public/assets/homeImg/cardImg/viande-fraîche2.jpg",
+      title: "Viande rouge tranchée",
+      content: "beouf rouge tranchée de 1.75 Kg",
+      price: "84.03"
+    },
+
+    {
+
+      image: "../../../public/assets/homeImg/cardImg/viande-fraîche3.webp",
+      title: "Viande hachée",
+      content: "viande hachée de 1.03Kg",
+      price: "80.70"
+    },
+    {
+
+      image: "../../../public/assets/homeImg/cardImg/viande-fraîche4.webp",
+      title: "Steack",
+      content: "viande Steack de 1.75 Kg",
+      price: "88.90"
+    },
+
+
 
   ]
   return propCards;

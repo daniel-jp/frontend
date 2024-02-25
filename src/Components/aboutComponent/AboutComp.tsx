@@ -1,7 +1,6 @@
 import {Stack, Typography} from '@mui/material';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
-import Link from '@mui/material/Link';
 import * as React from 'react';
 
 import Root from '../../layout/Root';
@@ -12,12 +11,12 @@ interface PropAbout {
   description2: string;
   image: string;
   imageText: string;
-  linkText: string;
+
   title: string;
 
 }
 
-const AboutComp: React.FC<PropAbout> = ({description, description2, image, imageText, linkText, title
+const AboutComp: React.FC<PropAbout> = ({description, description2, image, imageText, title
 }) => {
 
 
@@ -56,31 +55,30 @@ const AboutComp: React.FC<PropAbout> = ({description, description2, image, image
         }}>
           <Grid item md={6} sx={{
             // backgroundColor: 'rgba(0, 0, 0, 0.5)',
-            textAlign: "justify", textWrap: 'pretty', display: {xs: "grid", md: "flex"},
+            textAlign: 'center', display: {xs: "grid", md: "flex"},
 
           }}>
             <Box
-              sx={{
+              sx={{ 
                 position: 'relative',
                 //  pr: {md: 0}, pl: {xs: 0, md: 2},
-                ml: 2, mr: {xs: 2, md: 6}, my: 2
+                ml: 2, mr: {xs: 2, md: 6}, my: 2,
+
               }}
             >
-              <Typography component="h1" variant="h3" color="#2F855A"
-                sx={{fontWeight: "600"}} gutterBottom>
+              <Typography component="h1" color="#2F855A"
+                sx={{fontWeight: "600", fontSize: {sx: 18, sm: 22, md: 32}}} gutterBottom>
                 {title}
               </Typography>
               <Typography variant="h5" color="inherit" paragraph>
                 {description}
               </Typography>
-              <Link variant="subtitle1" href="#">
-                {linkText}
-              </Link>
+
             </Box>
 
             <Grid item sx={{
 
-              pt: {xs: 0, md: 10}, textAlign: "justify", position: 'relative',
+              pt: {xs: 0, md: 10}, textAlign: 'center', position: 'relative',
               color: "#fff",
               mr: 2, ml: {xs: 2, md: 6}
             }}>

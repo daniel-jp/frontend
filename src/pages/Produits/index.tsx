@@ -1,4 +1,4 @@
-import {Typography} from '@mui/material';
+import {Box, Typography} from '@mui/material';
 import {Outlet} from 'react-router-dom';
 
 import Root from '../../layout/Root';
@@ -6,13 +6,16 @@ import Root from '../../layout/Root';
 
 export default function index() {
   return (
-    <Root>
-      <Typography variant="h4">Viandre Page</Typography>
-
+    <Box sx={{mt: 8}}>
+      <Root>
+        <Typography fontWeight={500}
+          sx={{fontSize: {xs: 22, sm: 22, md: 22, lg: 32}}}>Trouver nos produits
+        </Typography>
       <div>
         <Outlet />
       </div>
 
-    </Root>
+      </Root>
+    </Box>
   )
 }

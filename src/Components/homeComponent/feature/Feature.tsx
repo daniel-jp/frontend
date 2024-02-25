@@ -23,19 +23,15 @@ export default function Feature(props: FeaturedPostProps) {
     <div>
       <Grid sx={{
         position: "relative", boxShadow: 10,
-
         top: {xs: -55, sm: -75, md: -100, lg: -190},
       }}>
         <CardActionArea>
           <Card sx={{display: 'flex', textAlign: 'justify'}}>
+
             <CardMedia
               component="img"
               sx={{
-                display: {xs: 'none', sm: 'block', }, width: "50%", // Adicione o efeito de zoom ao passar o cursor (hover)
-                '&:hover': {
-                  transform: 'scale(1.1)', // Ajuste o valor conforme necessário
-                },
-                transition: 'transform 0.5s ease', // Adiciona uma transição suave ao efeito de zoom
+                display: {xs: 'none', sm: 'block', }, width: "50%", // Adicione o efeito de zoom ao 
               }}
               image={post.image}
               alt={post.imageLabel}

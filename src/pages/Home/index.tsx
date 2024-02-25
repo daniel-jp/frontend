@@ -133,7 +133,7 @@ export default function index() {
           </Root>
           <Card sx={{
               marginTop: {xs: -3, sm: -4, md: -6, lg: -12},
-              borderRadius: 0, p: 3
+            borderRadius: '0', pb: 5, boxShadow: -0
 
             }}>
             <Root>

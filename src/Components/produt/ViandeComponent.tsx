@@ -46,7 +46,7 @@ export default function PouletComponent() {
             and reliable support.
           </Typography>
         </Box>
-        <Grid container spacing={2} >
+        <Grid container spacing={2} sx={{height: "60%"}} >
           {prodprops1.map((prod, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}
               sx={{display: 'flex'}}>
@@ -119,7 +119,7 @@ export default function PouletComponent() {
             and reliable support.
           </Typography>
         </Box>
-        <Grid container spacing={2} >
+        <Grid container spacing={2} sx={{height: "60%"}} >
           {prodprops2.map((prod, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}
               sx={{display: 'flex'}}>

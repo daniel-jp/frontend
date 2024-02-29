@@ -57,11 +57,11 @@ export default function index() {
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
-          backgroundImage: `url(${"../../../public/assets/homeImg/bg/menu.jpg"})`,
+          backgroundImage: `url(${"../../assets/homeImg/bg/menu.jpg"})`,
         }}
       >
         {/* Increase the priority of the hero background image */}
-        {<img style={{display: 'none'}} src={`${("../../../public/assets/homeImg/bg/menu.jpg")}`} alt="menu" />}
+        {<img style={{display: 'none'}} src={`${("../../assets/homeImg/bg/menu.jpg")}`} alt="menu" />}
         <Box
           sx={{
             position: 'absolute',

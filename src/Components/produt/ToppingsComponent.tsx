@@ -25,6 +25,7 @@ export default function ToppingsComponent() {
         alignItems: 'center',
         gap: {xs: 3, sm: 6},
 
+
       }}>
       <Box
         sx={{
@@ -42,10 +43,10 @@ export default function ToppingsComponent() {
           and reliable support.
         </Typography>
       </Box>
-      <Grid container spacing={2} sx={{height: "60%"}}>
+      <Grid container spacing={2}>
         {prodprops4.map((prod, index) => (
           <Grid item xs={12} sm={6} md={3} key={index}
-            sx={{display: 'flex'}}>
+            sx={{display: 'flex', height: "50%"}}>
             <Card
               sx={{
                 display: 'flex',
@@ -53,13 +54,12 @@ export default function ToppingsComponent() {
                 justifyContent: 'space-between',
                 flexGrow: 1, boxShadow: -0,
                 p: 1,
-              }}
-            >
+              }}>
 
               <img
                 src={`${prod.imageUrl}`}
                 alt={prod?.alt}
-                height='100%'
+                height="100%"
               />
 
               <Box

@@ -46,10 +46,10 @@ export default function PouletComponent() {
             and reliable support.
           </Typography>
         </Box>
-        <Grid container spacing={2} sx={{height: "60%"}} >
+        <Grid container spacing={2}>
           {prodprops1.map((prod, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}
-              sx={{display: 'flex'}}>
+              sx={{display: 'flex', height: "50%"}}>
               <Card
                 sx={{
                   display: 'flex',

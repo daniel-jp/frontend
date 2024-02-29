@@ -33,7 +33,7 @@ export default function Feature(props: FeaturedPostProps) {
               sx={{
                 display: {xs: 'none', sm: 'block', }, width: "50%", // Adicione o efeito de zoom ao 
               }}
-              image={post.image}
+              image={`${post.image}`}
               alt={post.imageLabel}
             />
             <CardContent sx={{flex: 1, width: "50%", }}>

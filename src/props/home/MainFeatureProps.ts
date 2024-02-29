@@ -1,7 +1,7 @@
 
 export default function MainFeatureProps() {
   const mainFeatureProps = [{
-    Img: "../../../dist/assets/homeImg/bg/b3.jpg",
+    Img: "../../assets/homeImg/bg/b3.jpg",
     imageText: "main image",
     text: "dddd"
   }]

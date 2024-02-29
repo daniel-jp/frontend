@@ -14,12 +14,9 @@ export const RouteItems = [
     name: "Trouver Produits",
     path: "/produit",
     children: [
+
       {
-        name: "Viandes bovines",
-        path: "bovines",
-      },
-      {
-        name: "Viandes de volailles",
+        name: "Viandes de bovines et volailles",
         path: "volailles",
       },
       {

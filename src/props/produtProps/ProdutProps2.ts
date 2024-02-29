@@ -3,25 +3,25 @@ export default function ProdutProps2() {
   const produtprops = [
 
     {
-      imageUrl: "/public/assets/images/poulet1.png",
+      imageUrl: "../../assets/images/poulet1.png",
       description: "Description 3",
       ratingValue: 5,
       alt: 'oumaty',
     }
     , {
-      imageUrl: "/public/assets/images/poulet2.png",
+      imageUrl: "../../assets/images/poulet2.png",
       description: "Description 3",
       ratingValue: 5,
       alt: 'oumaty',
     }
     , {
-      imageUrl: "/public/assets/images/poulet3.png",
+      imageUrl: "../../assets/images/poulet3.png",
       description: "Description 3",
       ratingValue: 5,
       alt: 'oumaty',
     },
     {
-      imageUrl: "/public/assets/images/poulet4.png",
+      imageUrl: "../../assets/images/poulet4.png",
       description: "Description 3",
       ratingValue: 5,
       alt: 'oumaty',
@@ -30,19 +30,19 @@ export default function ProdutProps2() {
 
 
     {
-      imageUrl: "/public/assets/images/poulet5.png",
+      imageUrl: "../../assets/images/poulet5.png",
       description: "Description 3",
       ratingValue: 5,
       alt: 'oumaty',
     },
     {
-      imageUrl: "/public/assets/images/poulet6.png",
+      imageUrl: "../../assets/images/poulet6.png",
       description: "Description 3",
       ratingValue: 5,
       alt: 'oumaty',
     },
     {
-      imageUrl: "/public/assets/images/poulet7.png",
+      imageUrl: "../../assets/images/poulet7.png",
       description: "Description 3",
       ratingValue: 5,
       alt: 'oumaty',

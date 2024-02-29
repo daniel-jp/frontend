@@ -24,6 +24,7 @@ export default function ToppingsComponent() {
         flexDirection: 'column',
         alignItems: 'center',
         gap: {xs: 3, sm: 6},
+
       }}>
       <Box
         sx={{
@@ -32,10 +33,10 @@ export default function ToppingsComponent() {
         }}
       >
         <Typography component="h2"
-          sx={{fontSize: {xs: 20, sm: 20, md: 22, lg: 26}, }} color="text.primary">
+          sx={{fontSize: {xs: 20, sm: 20, md: 22, lg: 26}, fontWeight: "700"}} color="#2D3748">
           Toppings de volailles
         </Typography>
-        <Typography variant="body1" sx={{textAlign: 'center'}} color="text.secondary">
+        <Typography variant="body1" sx={{textAlign: 'center', fontWeight: "500"}} color="#718096">
           See what our customers love about our products. Discover how we excel in
           efficiency, durability, and satisfaction. Join us for quality, innovation,
           and reliable support.
@@ -56,7 +57,7 @@ export default function ToppingsComponent() {
             >
 
               <img
-                src={prod?.imageUrl}
+                src={`${prod.imageUrl}`}
                 alt={prod?.alt}
                 height='100%'
               />

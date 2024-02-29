@@ -83,7 +83,7 @@ function NavBar() {
             ) : null}
             {!isMobile && (
               <Box pt={1} component={Link} to="/">
-                <img src="/public/assets/logo/log2.png" alt="Logo" height="50" />
+                <img src="../../assets/logo/log2.png" alt="Logo" height="50" />
               </Box>
             )}
           </Stack>
@@ -129,13 +129,13 @@ function NavBar() {
                       direction="row"
                       divider={<Divider orientation="vertical" flexItem />}
                     >
-                      <List sx={{backgroundColor: '#171923', width: "100%", pt: 4}}>
+                      <List sx={{backgroundColor: '#171923', width: "100%", pt: 4, px: 1}}>
                         {RouteItems.find((item) => item.id === 3)?.children?.map((subItem) => (
                           <ListItem
                             key={subItem?.name}
                             component={Link}
                             sx={{
-                              ml: 2,
+                              ml: 3,
                               textDecoration: "none", color: '#718096',
                               textTransform: 'uppercase', width: '92%',
                               justifyContent: 'space-between',
@@ -168,10 +168,9 @@ function NavBar() {
                           backgroundSize: 'cover',
                           backgroundRepeat: 'no-repeat',
                           backgroundPosition: 'center',
-                          backgroundImage: 'url("/public/assets/menu/beef-grelhado1.jpg")',
+                          backgroundImage: 'url("../../assets/menu/beef-grelhado1.jpg")',
                         }}
                       />
-
                     </Stack>
                   </Drawer>
                 </React.Fragment>
@@ -218,7 +217,6 @@ function NavBar() {
                             to={`/produit/${subItem?.path}`}
                             onClick={handleMobileDrawerClose}
                             sx={{textDecoration: "none", color: '#2D3748', }}>
-
                             <ListItemText sx={{ml: 2, }}>{subItem?.name}</ListItemText>
                           </ListItem>
                         ))}
@@ -238,7 +236,6 @@ function NavBar() {
               )}
             </React.Fragment>
           ))}
-
         </List>
       </Drawer>
     </div >

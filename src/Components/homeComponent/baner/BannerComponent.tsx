@@ -30,7 +30,7 @@ export default function BannerComponent({description, image, imageText, linkText
       }}
     >
       {/* Increase the priority of the hero background image */}
-      {<img style={{display: 'none'}} src={image} alt={imageText} />}
+      {<img style={{display: 'none'}} src={`${image}`} alt={imageText} />}
       <Box
         sx={{
 

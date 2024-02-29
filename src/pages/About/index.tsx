@@ -1,4 +1,4 @@
-import {Box, Grid, Stack} from '@mui/material';
+import {Box, Button, Grid, Link, Stack, Typography} from '@mui/material';
 
 import AboutComp from '../../Components/aboutComponent/AboutComp';
 import AboutFeatuere from '../../Components/aboutComponent/AboutFeatuere';
@@ -46,6 +46,51 @@ export default function index() {
           }
 
         </Grid>
-      </Root></Stack >
+      </Root>
+
+      <Stack height={["350px", "450px", "500px"]}
+        sx={{
+          position: 'relative',
+          backgroundColor: 'grey.800',
+          color: '#fff',
+          width: "100%",
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          backgroundImage: `url(${"../../../public/assets/homeImg/bg/menu.jpg"})`,
+        }}
+      >
+        {/* Increase the priority of the hero background image */}
+        {<img style={{display: 'none'}} src={`${("../../../public/assets/homeImg/bg/menu.jpg")}`} alt="menu" />}
+        <Box
+          sx={{
+            position: 'absolute',
+            top: 0,
+            bottom: 0,
+            right: 0,
+            left: 0,
+            backgroundColor: 'rgba(0,0,0,.5)',
+          }} />
+        <Grid sx={{textAlign: "center", pt: "17%"}}>
+          <Grid item md={6} >
+            <Box
+              sx={{
+                position: 'relative', textAlign: "center",
+              }}>
+              <Typography fontSize={{xs: 20, md: 30}} sx={{fontWeight: '900'}} component="h1" variant="h3" color="inherit" gutterBottom>
+                Trouvez les meilleurs prix sur notre menu
+              </Typography>
+
+              <Link variant="subtitle1" href="#">
+                <Button color="secondary"
+                  sx={{backgroundColor: 'rgba(10, 50, 50, 0.8)', color: '#CBD5E0', px: 5}}>
+                  notre menu
+                </Button>
+              </Link>
+            </Box>
+          </Grid>
+        </Grid>
+      </Stack>
+    </Stack >
   )
 }

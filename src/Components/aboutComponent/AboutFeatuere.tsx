@@ -23,6 +23,7 @@ export default function AboutFeatuere({date,
 
 
   return (
+    <>
     <Grid item xs={12} md={6} py={4} >
       <CardActionArea component="a" href="#">
         <Card sx={{display: 'flex'}} >
@@ -48,6 +49,9 @@ export default function AboutFeatuere({date,
           />
         </Card>
       </CardActionArea>
-    </Grid>
+      </Grid>
+
+
+    </>
   );
 }

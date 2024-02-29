@@ -32,7 +32,7 @@ export default function MainFeature({Img, imageText}: MainFeaturedPostProps) {
 
       }}
     >
-      {<img style={{display: 'none', filter: 'auto', }} src={Img}
+      {<img style={{display: 'none', filter: 'auto', }} src={`${Img}`}
         alt={imageText} loading='lazy' />}
     </Box>
 

@@ -11,38 +11,38 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: '/dist/assets/homeImg/carousel/im3.png',
+    image: '../../assets/homeImg/carousel/im3.png',
   },
   {
-    image: '/dist/assets/homeImg/carousel/im5.png',
+    image: '../../assets/homeImg/carousel/im5.png',
   },
   {
-    image: '/dist/assets/homeImg/carousel/im6.png',
+    image: '../../assets/homeImg/carousel/im6.png',
 
   },
   {
-    image: '/dist/assets/homeImg/carousel/Imagem8.png',
+    image: '../../assets/homeImg/carousel/Imagem8.png',
 
   },
 
   {
-    image: '/dist/assets/homeImg/carousel/Imagem9.png',
+    image: '../../assets/homeImg/carousel/Imagem9.png',
   },
   {
-    image: '/dist/assets/homeImg/carousel/car5.png',
+    image: '../../assets/homeImg/carousel/car5.png',
 
   },
   {
-    image: '/dist/assets/homeImg/carousel/car2.png',
+    image: '../../assets/homeImg/carousel/car2.png',
   },
   {
-    image: '/dist/assets/homeImg/carousel/car3.png',
+    image: '../../assets/homeImg/carousel/car3.png',
   },
   {
-    image: '/dist/assets/homeImg/carousel/car4.png',
+    image: '../../assets/homeImg/carousel/car4.png',
   },
   {
-    image: '/dist/assets/homeImg/carousel/Imagem19.png',
+    image: '../../assets/homeImg/carousel/Imagem19.png',
   },
 
 ];
@@ -78,7 +78,7 @@ const Carousel: React.FC = () => {
             opacity: "100%"
           }}
             height="200px"
-            image={slide.image} alt={`Image ${index + 1}`} />
+            image={`${slide.image}`} alt={`Image ${index + 1}`} />
         </Stack>
       ))}
     </Slider>

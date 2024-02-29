@@ -40,7 +40,7 @@ export default function Information({description, image, imageLabel, title}: Fea
                   transition: 'transform 0.3s ease', // Adiciona uma transição suave ao efeito de zoom
 
                 }}
-                image={image}
+              image={`${image}`}
                 alt={imageLabel} />
             </Stack>
 

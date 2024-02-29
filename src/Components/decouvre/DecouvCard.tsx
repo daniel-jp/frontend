@@ -35,7 +35,7 @@ export default function DecouvCard1() {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
-        backgroundImage: 'url("/public/assets/decouvre/carv.jpg")',
+        backgroundImage: `url(${"../../assets/decouvre/carv.jpg"})`,
 
       }}>
         <Root>

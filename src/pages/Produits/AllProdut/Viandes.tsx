@@ -1,13 +1,13 @@
 import {Box, Stack} from '@mui/material';
 
-import PouletComponent from '../../../Components/produt/PouletComponent';
+import ViandeComponent from '../../../Components/produt/ViandeComponent';
 
 // Service.tsx
 export default function FraiPoulet() {
   return (
     <Box>
       <Stack>
-        <PouletComponent />
+        <ViandeComponent />
       </Stack>
 
     </Box>

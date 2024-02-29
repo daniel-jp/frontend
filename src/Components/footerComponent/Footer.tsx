@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
         <Grid container sx={{justifyContent: "space-between", p: 2}}>
           {/* Logo */}
           <Grid item xs={12} sm={6} md={2} sx={{mb: 2}}>
-            <img src="../../../public/assets/logo/log1.png" alt="Logo" height="50" />
+            <img src="../../assets/logo/log1.png" alt="Logo" height="50" />
           </Grid>
 
           {/* Company */}

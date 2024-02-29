@@ -1,5 +1,5 @@
 {
-    "rewrites": [
-        { "source": "/assets/(.*)", "destination": "/assets/$1" }
-    ]
+    "redirects": [{
+        "rewrites": [{ "source": "/(.*)", "destination": "/" }]
+    }]
 }

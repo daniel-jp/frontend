@@ -83,7 +83,14 @@ const ContactForm = () => {
               <Grid container spacing={2}>
                 <Grid item xs={12}>
                   <TextField
-                    fullWidth
+                    fullWidth sx={{
+                      bgcolor: "#EDF2F7",
+                      ":hover": {
+                        cursor: "pointer",
+                        color: "#2D3748",
+                        boxShadow: 5,
+                      }
+                    }}
                     label="Nome"
                     variant="outlined"
                     value={name}
@@ -93,7 +100,14 @@ const ContactForm = () => {
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
-                    fullWidth
+                    fullWidth sx={{
+                      bgcolor: "#EDF2F7",
+                      ":hover": {
+                        cursor: "pointer",
+                        color: "#2D3748",
+                        boxShadow: 5,
+                      }
+                    }}
                     label="Email"
                     variant="outlined"
                     type="email"
@@ -104,7 +118,14 @@ const ContactForm = () => {
                 </Grid>
                 <Grid item xs={12}>
                   <TextField
-                    fullWidth
+                    fullWidth sx={{
+                      bgcolor: "#EDF2F7",
+                      ":hover": {
+                        cursor: "pointer",
+                        color: "#2D3748",
+                        boxShadow: 5,
+                      }
+                    }}
                     label="Mensagem"
                     variant="outlined"
                     multiline

@@ -5,18 +5,18 @@ const banerProps = [
   {
     id: 1,
     alt: "Chicken",
-    avatar: "/public/assets/homeImg/baner/banerC.png"
+    avatar: "../../assets/homeImg/baner/banerC.png"
   }
   , {
     id: 2,
     alt: "Beaaf2",
-    avatar: "/public/assets/homeImg/baner/banerC1.png"
+    avatar: "../../assets/homeImg/baner/banerC1.png"
   }
   ,
   {
     id: 3,
     alt: "Beaaf3",
-    avatar: "/public/assets/homeImg/baner/naner3.png"
+    avatar: "../../assets/homeImg/baner/naner3.png"
   }
 ];
 

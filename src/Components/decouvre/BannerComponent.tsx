@@ -17,27 +17,27 @@ const slides: Slide[] = [
   {
     title: "Portrait d'animal oiseau coq",
     description: 'Cuisinez vos plats à partir de produits naturels',
-    imageUrl: '/public/assets/decouvre/slider2.png',
+    imageUrl: '../../assets/decouvre/slider2.png',
   },
   {
     title: "Meilleur que l'original.",
     description: 'Nuggets de qualité pour un moment de convivialité !',
-    imageUrl: '/public/assets/decouvre/slidem1.jpg',
+    imageUrl: '../../assets/decouvre/slidem1.jpg',
   },
   {
     title: "LE GOÛT DE VIANDE CARACTÈRE",
     description: "Découvrez notre gamme de produits à base de viandes bovines. Steak façon bouchère, 100 % Pur boeuf, Burger, Burger à L'Oignons...",
-    imageUrl: '/public/assets/decouvre/boi.jpg',
+    imageUrl: '../../assets/decouvre/boi.jpg',
   },
   {
     title: "Viandes bovines",
     description: 'Découvrez notre gamme de produits à base de viandes bovines.',
-    imageUrl: '/public/assets/decouvre/slidem2.jpg',
+    imageUrl: '../../assets/decouvre/slidem2.jpg',
   },
   {
     title: 'DU FRAIS DANS VOS ASSIETTES',
     description: 'Cuisinez vos plats à partir de produits frais de qualité supérieure,Filets de poulet, pilons de poulet, cuisses de poulet.',
-    imageUrl: '/public/assets/decouvre/bnner3.webp',
+    imageUrl: '../../assets/decouvre/bnner3.webp',
   },
 ];
 

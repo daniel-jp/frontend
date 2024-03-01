@@ -83,7 +83,15 @@ export default function index() {
 
               <Link variant="subtitle1" href="#">
                 <Button color="secondary"
-                  sx={{backgroundColor: 'rgba(10, 50, 50, 0.8)', color: '#CBD5E0', px: 5}}>
+                  sx={{
+                    backgroundColor: 'rgba(10, 50, 50, 0.8)',
+                    color: '#fff',
+                    '&:hover': {
+                      transition: 'color 0.1s linear 0s',
+                      backgroundColor: 'rgba(0, 10, 10, 0.8)',
+                      fontWeight: "600", color: '#fff',
+                    }, px: 5
+                  }}>
                   notre menu
                 </Button>
               </Link>

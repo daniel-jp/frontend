@@ -50,9 +50,9 @@ const Carousel: React.FC = () => {
 
 
   const Slideshow = styled.div`
+  width:"100%";
    .btn {
           display: inline-block;
-         
           color: #fff;
           text-decoration: none;
           position: relative;
@@ -123,7 +123,7 @@ const Carousel: React.FC = () => {
           sx={{
             position: 'sticky',
             width: '100%',
-            height: '60vh',
+            height: '600px',
             overflow: 'hidden',
             backgroundPosition: 'center',
             zIndex: 1,
@@ -143,9 +143,8 @@ const Carousel: React.FC = () => {
                 top: 0,
                 left: 0,
               }}
-              image={slide.imageUrl}
-              alt={`Image ${index + 1
-                }`}
+              image={`${slide.imageUrl}`}
+              alt={`Image ${index + 1}`}
             />
             <Stack
               justifyContent="center"
@@ -168,7 +167,7 @@ const Carousel: React.FC = () => {
                   font: "'Oswald', sans- serif",
                   letterSpacing: '0.28em', fontSize: {
                     xs: 20, sm: 32, md: 42,
-                  }, fontWeight: '900', mx: {xs: 0, sm: 0, md: 30},
+                  }, fontWeight: '900',
 
                 }}>
                   {slide.title}
@@ -179,7 +178,7 @@ const Carousel: React.FC = () => {
                   mb: 3,
                   fontSize: {
                     xs: 18, sm: 18, md: 20,
-                  }, mx: {xs: 0, sm: 0, md: 40}, lineHeight: 1.4,
+                  }, mx: {xs: 0, sm: 0, md: 18}, lineHeight: 1.4,
                 }}>{slide.description}</Typography>
                 <Button className='btn' sx={{
                   textTransform: 'uppercase',

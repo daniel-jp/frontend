@@ -1,90 +1,52 @@
-import Box from '@mui/material/Box';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import Grid from '@mui/material/Grid';
-import Rating from '@mui/material/Rating';
-import Typography from '@mui/material/Typography';
-
-import ProdutProps4 from '../../props/produtProps/ProdutProps4';
+import {Card, CardActions, CardContent, CardMedia, Grid, Rating, Typography} from '@mui/material';
 
 
 
-
-
-export default function ToppingsComponent() {
-  const prodprops4 = ProdutProps4();
-
-  return (
-    <Box
-      sx={{
-        pt: {xs: 4, sm: 12},
-        pb: {xs: 8, sm: 16},
-        position: 'relative',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: {xs: 3, sm: 6},
-
-
-      }}>
-      <Box
-        sx={{
-          width: {sm: '100%', md: '60%'},
-          textAlign: {sm: 'left', md: 'center'},
-        }}
-      >
-        <Typography component="h2"
-          sx={{fontSize: {xs: 20, sm: 20, md: 22, lg: 26}, fontWeight: "700"}} color="#2D3748">
-          Toppings de volailles
-        </Typography>
-        <Typography variant="body1" sx={{textAlign: 'center', fontWeight: "500"}} color="#718096">
-          See what our customers love about our products. Discover how we excel in
-          efficiency, durability, and satisfaction. Join us for quality, innovation,
-          and reliable support.
-        </Typography>
-      </Box>
-      <Grid container spacing={2}>
-        {prodprops4.map((prod, index) => (
-          <Grid item xs={12} sm={6} md={3} key={index}
-            sx={{display: 'flex', height: "50%"}}>
-            <Card
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                flexGrow: 1, boxShadow: -0,
-                p: 1,
-              }}>
-
-              <img
-                src={`${prod.imageUrl}`}
-                alt={prod?.alt}
-                height="100%"
-              />
-
-              <Box
-                sx={{
-
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-
-                }}
-              >
-
-                <Typography variant="h6" component="p">
-                  {prod?.description}
-                </Typography>
-
-                <CardActions disableSpacing sx={{justifyContent: 'space-between'}}>
-                  <Typography fontSize="lg" fontWeight="lg">
-                    $2,900
-                  </Typography>
-                  <Rating value={prod?.ratingValue} readOnly /></CardActions>
-              </Box>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-    </Box>
-  );
+interface SubCardProps {
+  imageUrl: string;
+  description: string;
+  ratingValue: number;
+  alt: string;
+  price: string;
 }
+
+const ToppingsComponent: React.FC<SubCardProps> = ({imageUrl, description, ratingValue, alt, price}) => {
+  return (
+    <>
+      <Grid container item xs={12} sm={6} md={3}>
+        <Card sx={{
+          borderRadius: '0',
+          ":hover": {
+            cursor: "pointer",
+            color: "#2D3748",
+            boxShadow: 8,
+          }, boxShadow: -0
+        }}>
+          <CardMedia component="img" height={200} image={`${imageUrl}`} alt={alt}
+            sx={{// Adicione o efeito de zoom ao passar o cursor (hover)
+              '&:hover': {
+                transform: 'scale(1.1)', // Ajuste o valor conforme necessário
+              },
+              transition: 'transform 0.3s ease', // Adiciona uma transição suave ao efeito de zoom
+            }} />
+          <CardContent>
+
+            <Typography variant="body2" fontWeight={500} color="#2D3748">
+              {description}
+            </Typography>
+
+          </CardContent>
+
+          <CardActions disableSpacing sx={{justifyContent: 'space-between'}}>
+            <Typography fontSize="lg" fontWeight="lg">
+              £{price}
+            </Typography>
+            <Rating value={ratingValue} />
+          </CardActions>
+        </Card>
+      </Grid>
+    </>
+  );
+};
+
+export default ToppingsComponent;

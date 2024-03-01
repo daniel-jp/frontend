@@ -55,8 +55,15 @@ export default function BannerComponent({description, image, imageText, linkText
             <Typography fontSize={{xs: 16, md: 22}} sx={{fontWeight: '600'}} variant="h5" color="inherit" paragraph>
               {description}
             </Typography>
-            <Link variant="subtitle1" href="#">
-              <Button variant="contained" sx={{bgcolor: "#ab47bc"}}>
+            <Link href="#" >
+              <Button sx={{
+                bgcolor: "#ab47bc", textDecoration: "none", color: '#fff',
+                '&:hover': {
+                  transition: 'color 0.1s linear 0s',
+                  backgroundColor: 'rgba(0, 10, 10, 0.8)',
+                  fontWeight: "600", color: '#fff',
+                }
+              }}>
                 {linkText}
               </Button>
             </Link>

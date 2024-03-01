@@ -1,13 +1,8 @@
-import {Card, CardActions, CardContent, CardMedia, Grid, Rating, Typography} from '@mui/material';
+import {Card, CardActions, CardContent, CardMedia, Grid, Typography} from '@mui/material';
+import Rating from '@mui/material/Rating';
+import React from 'react';
 
-
-
-
-
-
-
-
-interface SubCardProps1 {
+interface SubCardProps {
   imageUrl: string;
   description: string;
   ratingValue: number;
@@ -15,9 +10,13 @@ interface SubCardProps1 {
   price: string;
 }
 
-const GourmandComponent: React.FC<SubCardProps1> = ({imageUrl, description, ratingValue, alt, price}) => {
+
+
+
+const ViandeComponent2: React.FC<SubCardProps> = ({imageUrl, description, ratingValue, alt, price}) => {
   return (
     <>
+
       <Grid container item xs={12} sm={6} md={3}>
         <Card sx={{
           borderRadius: '0',
@@ -54,4 +53,4 @@ const GourmandComponent: React.FC<SubCardProps1> = ({imageUrl, description, rati
   );
 };
 
-export default GourmandComponent;
+export default ViandeComponent2;

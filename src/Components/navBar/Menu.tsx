@@ -2,7 +2,6 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import LocalDiningIcon from '@mui/icons-material/LocalDining';
 import MenuIcon from '@mui/icons-material/Menu';
 import {
   AppBar,
@@ -26,6 +25,7 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 
 import {RouteItems} from '../../utils/RouteItems';
+
 
 function capitalizeFirstAndLast(str: string) {
   return str.charAt(0).toUpperCase() + str.slice(1, -1) + str.slice(-1).toLowerCase();
@@ -59,10 +59,7 @@ function NavBar() {
 
   return (
     <div>
-      <AppBar position="static" sx={{
-        overflow: 'hidden', position: 'fixed', top: 0, width: '100%', zIndex: 1,
-        backgroundColor: 'rgba(10, 50, 50, 0.8)'
-      }}>
+      <AppBar position="static" sx={{bgcolor: "#09090A"}}>
         <Toolbar sx={{
           display: {xs: 'block', sm: 'block', md: 'flex'},
           justifyContent: 'space-between',
@@ -109,9 +106,9 @@ function NavBar() {
                       onClick={handleServiceSubMenuClick}>
                       {item.name}
                       {serviceSubMenuOpen ? (
-                          <KeyboardArrowDownIcon sx={{fontSize: 16}} />
+                        <KeyboardArrowDownIcon sx={{fontSize: 16}} /> // Ajuste o tamanho conforme necessário
                       ) : (
-                            <ArrowForwardIosIcon sx={{fontSize: 16}} />
+                        <ArrowForwardIosIcon sx={{fontSize: 16}} /> // Ajuste o tamanho conforme necessário
                       )}
                     </Button>
                   )}
@@ -152,8 +149,8 @@ function NavBar() {
                             }}
                             to={`/produit/${subItem?.path}`}
                             onClick={() => setServiceSubMenuOpen(false)}>
-                            <LocalDiningIcon />
-                            <Typography sx={{fontWeight: "600", fontSize: 16, }}>
+
+                            <Typography sx={{fontWeight: "600", fontSize: 16}}>
                               {subItem?.name}
                             </Typography>
                             <ArrowForwardIcon />
@@ -188,7 +185,7 @@ function NavBar() {
       </AppBar>
 
       <Drawer
-        anchor={isMobile ? 'right' : 'top'}
+        anchor="left"
         open={mobileDrawerOpen}
         onClose={handleMobileDrawerClose}
         sx={{bgcolor: "#fff"}}>
@@ -228,7 +225,7 @@ function NavBar() {
                   )}
                 </div>
               ) : (
-                  <ListItem
+                <ListItem
                   component={Link}
                   to={item.path}
                   onClick={handleMobileDrawerClose}
@@ -241,7 +238,7 @@ function NavBar() {
         </List>
       </Drawer>
 
-    </div>
+    </div >
   );
 }
 

@@ -16,7 +16,7 @@ export default function index() {
   return (
     <div>
 
-      <Stack sx={{overflow: 'hidden', }}>
+      <Stack sx={{mt: "75px", }}>
         <BannerComponent />
       </Stack>
       {/* <Stack>

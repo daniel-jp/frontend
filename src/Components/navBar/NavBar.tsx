@@ -60,7 +60,7 @@ function NavBar() {
   return (
     <div>
       <AppBar position="static" sx={{
-        overflow: 'hidden', position: 'fixed', top: 0, width: '100%', zIndex: 1,
+        overflow: 'hidden', position: 'fixed', top: 0, width: '100%', zIndex: 1050,
         backgroundColor: 'rgba(10, 50, 50, 0.8)'
       }}>
         <Toolbar sx={{
@@ -142,7 +142,8 @@ function NavBar() {
                               ml: 3,
                               textDecoration: "none", color: '#718096',
                               textTransform: 'uppercase', width: '92%',
-                              justifyContent: 'space-between',
+
+
 
                               '&:hover': {
                                 backgroundColor: 'rgba(12, 0, 10, 0.4)',
@@ -153,7 +154,7 @@ function NavBar() {
                             to={`/produit/${subItem?.path}`}
                             onClick={() => setServiceSubMenuOpen(false)}>
                             <LocalDiningIcon />
-                            <Typography sx={{fontWeight: "600", fontSize: 16, }}>
+                            <Typography sx={{fontWeight: "600", fontSize: 16, mx: 4}}>
                               {subItem?.name}
                             </Typography>
                             <ArrowForwardIcon />

@@ -4,95 +4,92 @@ export default function ProdutProps1() {
 
     {
       imageUrl: "../../assets/images/tendre_oumaty_.png",
-      description: "Description 3",
-      ratingValue: 5,
+      description: "Steak extra tendre (Qté 800g)",
+      ratingValue: 4.5,
       alt: 'oumaty',
-      price: '8.9',
+      price: '14.90',
     }
     , {
       imageUrl: "../../assets/images/purboeuf_oumaty_.png",
-      description: "Description 3",
+      description: "Steak haché pur boeuf (Qte 800g)",
       ratingValue: 5,
       alt: 'oumaty',
-      price: '8.9',
+      price: '11.99',
 
     }
     , {
       imageUrl: "../../assets/images/oignon_oumaty_.png",
-      description: "Description 3",
+      description: "Burger à l'oignon (Qte 800g)",
       ratingValue: 5,
       alt: 'oumaty',
-      price: '8.9',
+      price: '11.55',
     },
     {
       imageUrl: "../../assets/images/burger_oumaty_.png",
-      description: "Description 3",
+      description: "Steak burger (Qté 800gr)",
       ratingValue: 5,
       alt: 'oumaty',
-      price: '8.9',
+      price: '12.39',
     },
 
 
 
     {
       imageUrl: "../../assets/images/boulette_oumaty_.png",
-      description: "Description 3",
+      description: "Boulettes à l'orientale (900g)",
       ratingValue: 5,
       alt: 'oumaty',
-      price: "8.9",
+      price: "16.29",
     },
     {
       imageUrl: "../../assets/images/egrenee_oumaty_.png",
-      description: "Description 3",
+      description: "Viande hachée Egrenée (800g)",
       ratingValue: 5,
       alt: 'oumaty',
-      price: "8.9",
+      price: "18.9",
     },
     {
       imageUrl: "../../assets/images/viande-ache.png",
-      description: "Description 3",
+      description: "Viande hachée pour boeuf (200g)",
       ratingValue: 5,
       alt: 'oumaty',
       price: "8.9",
     },
     {
       imageUrl: "../../assets/images/FB3kg_oumaty_.png",
-      description: "Description 3",
+      description: "Steak Façon bouchère (3kg)",
       ratingValue: 5,
       alt: 'oumaty',
-      price: "8.9",
+      price: "15.77",
     },
 
     {
       imageUrl: "../../assets/images/_oumaty_80gr.png",
-      description: "Description 2",
+      description: "Steak haché pur boeuf family box(Qté 2,24kg)",
       ratingValue: 4,
       alt: 'oumaty',
-      price: "8.9",
+      price: "16.89",
     },
     {
       imageUrl: "../../assets/images/steak-gamme-pro.png",
-      description: "Description 3",
-      ratingValue: 5,
+      description: "The Steak Haché 100% Pur boeuf.",
+      ratingValue: 4,
       alt: 'oumaty',
-      price: "8.9",
+      price: "13.39",
     },
-
-
-
     {
       imageUrl: "../../assets/images/FB600gr_oumaty_.png ",
-      description: "Description 1",
+      description: "Steak Façon bouchère",
       ratingValue: 3,
       alt: 'oumaty',
-      price: "8.9",
+      price: "13.39",
     },
     {
       imageUrl: "../../assets/images/_oumaty_45g.png",
-      description: "Description 3",
+      description: " Steak haché pur boeuf family 2,25g",
       ratingValue: 5,
       alt: 'oumaty',
-      price: "8.9",
+      price: "17.95",
     },
   ]
   return produtprops;

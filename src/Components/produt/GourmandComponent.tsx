@@ -21,13 +21,14 @@ const GourmandComponent: React.FC<SubCardProps1> = ({imageUrl, description, rati
       <Grid container item xs={12} sm={6} md={3}>
         <Card sx={{
           borderRadius: '0',
+          width: 300,
           ":hover": {
             cursor: "pointer",
             color: "#2D3748",
             boxShadow: 8,
           }, boxShadow: -0
         }}>
-          <CardMedia component="img" height={200} image={`${imageUrl}`} alt={alt}
+          <CardMedia component="img" height={200} width={"100%"} image={`${imageUrl}`} alt={alt}
             sx={{// Adicione o efeito de zoom ao passar o cursor (hover)
               '&:hover': {
                 transform: 'scale(1.1)', // Ajuste o valor conforme necessário

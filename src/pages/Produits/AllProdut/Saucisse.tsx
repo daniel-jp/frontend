@@ -27,7 +27,6 @@ export default function Saucisse() {
         </Typography>
       </Box>
 
-
       <Grid container spacing={2} >
         {
           pordutProps.map((prods) => (

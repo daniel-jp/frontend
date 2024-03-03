@@ -17,14 +17,14 @@ import {
   ListItemIcon,
   ListItemText,
   Stack,
-  Theme,
+
   Toolbar,
   Typography,
   useMediaQuery,
 } from '@mui/material';
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-
+import {Theme} from '@mui/material/styles';
 import {RouteItems} from '../../utils/RouteItems';
 
 function capitalizeFirstAndLast(str: string) {

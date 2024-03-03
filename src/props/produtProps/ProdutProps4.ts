@@ -4,48 +4,48 @@ export default function ProdutProps4() {
 
     {
       imageUrl: "../../assets/images/topping1.png",
-      description: "Description 3",
+      description: "Lamelles kebab",
       ratingValue: 5,
       alt: 'oumaty',
-      price: "8.9",
+      price: "11.13",
     }
     , {
       imageUrl: "../../assets/images/topping2.png",
-      description: "Description 3",
+      description: "amelles Kebab",
       ratingValue: 5,
       alt: 'oumaty',
-      price: "8.9",
+      price: "10.19",
     }
     , {
       imageUrl: "../../assets/images/topping3.png",
-      description: "Description 3",
+      description: "Cubes de filet de poulet rôti",
       ratingValue: 5,
       alt: 'oumaty',
-      price: "8.9",
+      price: "13.39",
     },
     {
       imageUrl: "../../assets/images/topping4.png",
-      description: "Description 3",
+      description: "Émincé de filet poulet nature",
       ratingValue: 5,
       alt: 'oumaty',
-      price: "8.9",
+      price: "11.12",
     },
 
 
 
     {
       imageUrl: "../../assets/images/topping5.png",
-      description: "Description 3",
+      description: "Emince de poulet rôti",
       ratingValue: 5,
       alt: 'oumaty',
-      price: "8.9",
+      price: "11.33",
     },
     {
       imageUrl: "../../assets/images/topping6.png",
-      description: "Description 3",
+      description: "Emincé tikka",
       ratingValue: 5,
       alt: 'oumaty',
-      price: "8.9",
+      price: "12.39",
     },
 
 
@@ -54,74 +54,74 @@ export default function ProdutProps4() {
 
     {
       imageUrl: "../../assets/images/topping7.png",
-      description: "Description 3",
+      description: "Emince de filet de poulet ",
       ratingValue: 5,
       alt: 'oumaty',
-      price: "8.9",
+      price: "11.39",
     }
     , {
       imageUrl: "../../assets/images/topping8.png",
-      description: "Description 3",
+      description: "Topping",
       ratingValue: 5,
       alt: 'oumaty',
       price: "8.9",
     }
     , {
       imageUrl: "../../assets/images/topping9.png",
-      description: "Description 3",
+      description: "Filet de poulet de cube",
       ratingValue: 5,
       alt: 'oumaty',
-      price: "8.9",
+      price: "10.79",
     },
     {
       imageUrl: "../../assets/images/topping10.png",
-      description: "Description 3",
+      description: "Eminces cuits de poulet BiO",
       ratingValue: 5,
       alt: 'oumaty',
-      price: "8.9",
+      price: "8.93",
     },
 
 
 
     {
       imageUrl: "../../assets/images/topping11.png",
-      description: "Description 3",
+      description: "Eminces cuits de poulet",
       ratingValue: 5,
       alt: 'oumaty',
-      price: "8.9",
+      price: "8.12",
     },
     {
       imageUrl: "../../assets/images/topping12.png",
-      description: "Description 3",
+      description: "Emince de filet de poulet Roti",
       ratingValue: 5,
       alt: 'oumaty',
-      price: "8.9",
+      price: "10.29",
     },
 
     {
       imageUrl: "../../assets/images/topping13.png",
-      description: "Description 3",
+      description: "Émincé de blanc de poulet",
       ratingValue: 5,
       alt: 'oumaty',
       price: "8.9",
     }
     , {
       imageUrl: "../../assets/images/topping14.png",
-      description: "Description 3",
+      description: "Emincés de Volaille cuits",
       ratingValue: 5,
       alt: 'oumaty',
       price: "8.9",
     }
     , {
       imageUrl: "../../assets/images/topping15.png",
-      description: "Description 3",
+      description: "Emincés De Volaille Cuits Kebab",
       ratingValue: 5,
       alt: 'oumaty',
       price: "8.9",
     },
     {
       imageUrl: "../../assets/images/topping16.png",
-      description: "Description 3",
+      description: "Émincé de bœuf 800g",
       ratingValue: 5,
       alt: 'oumaty',
       price: "8.9",
@@ -131,31 +131,31 @@ export default function ProdutProps4() {
 
     {
       imageUrl: "../../assets/images/topping17.png",
-      description: "Description 3",
+      description: "Lamelles de Volaille",
       ratingValue: 5,
       alt: 'oumaty',
-      price: "8.9",
+      price: "9.9",
     },
     {
       imageUrl: "../../assets/images/topping18.png",
-      description: "Description 3",
+      description: "Cora émincés de poulet rôtis 150g",
       ratingValue: 5,
       alt: 'oumaty',
-      price: "8.9",
+      price: "10.39",
     },
     {
       imageUrl: "../../assets/images/topping19.png",
-      description: "Description 3",
+      description: "Emincés de filet de poulet rôtis cuits surgelés 500g",
       ratingValue: 5,
       alt: 'oumaty',
       price: "8.9",
     },
     {
       imageUrl: "../../assets/images/topping20.png",
-      description: "Description 3",
+      description: "filet de poulet tranché",
       ratingValue: 5,
       alt: 'oumaty',
-      price: "8.9",
+      price: "9.29",
     },
   ]
   return produtprops;

@@ -49,8 +49,6 @@ const AboutComp: React.FC<PropAbout> = ({description, description2, image, image
       />
       <Root>
         <Grid sx={{
-
-
           my: 6
         }}>
           <Grid item md={6} sx={{
@@ -63,6 +61,8 @@ const AboutComp: React.FC<PropAbout> = ({description, description2, image, image
                 position: 'relative',
                 //  pr: {md: 0}, pl: {xs: 0, md: 2},
                 ml: 2, mr: {xs: 2, md: 6}, my: 2,
+                mt: "75px",
+
 
               }}
             >

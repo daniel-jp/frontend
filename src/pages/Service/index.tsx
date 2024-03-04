@@ -16,7 +16,7 @@ export default function index() {
   return (
     <div>
 
-      <Stack sx={{mt: "75px", }}>
+      <Stack>
         <BannerComponent />
       </Stack>
       {/* <Stack>

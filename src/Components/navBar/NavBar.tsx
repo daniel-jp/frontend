@@ -17,14 +17,14 @@ import {
   ListItemIcon,
   ListItemText,
   Stack,
-
   Toolbar,
   Typography,
   useMediaQuery,
 } from '@mui/material';
+import {Theme} from '@mui/material/styles';
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
-import {Theme} from '@mui/material/styles';
+
 import {RouteItems} from '../../utils/RouteItems';
 
 function capitalizeFirstAndLast(str: string) {
@@ -59,12 +59,13 @@ function NavBar() {
 
   return (
     <div>
-      <AppBar position="static" sx={{
-        overflow: 'hidden', position: 'fixed', top: 0, width: '100%', zIndex: 1050,
-        backgroundColor: 'rgba(10, 50, 50, 0.8)'
+      <AppBar position="fixed" sx={{
+        overflow: 'hidden', top: 0, width: '100%', zIndex: 1050,
+        transition: 'color 0.1s linear 0s',
+        backgroundColor: 'rgba(0, 0, 0, 0.6)',
       }}>
         <Toolbar sx={{
-          display: {xs: 'block', sm: 'block', md: 'flex'},
+          display: {xs: 'block', sm: 'flex', md: 'flex'},
           justifyContent: 'space-between',
           justifyItems: "center",
           alignContent: "center",

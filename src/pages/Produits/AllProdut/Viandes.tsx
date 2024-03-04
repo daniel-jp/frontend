@@ -13,15 +13,14 @@ export default function FraiPoulet() {
 
 
   return (
-    <Box sx={{my: 10}}>
+    <Box sx={{my: 10, }}>
       <Stack mb={10}>
         <Box mb={5}
           sx={{
-            px: 2,
+            px: 2, mt: "75px",
             textAlign: "center", justifyContent: 'center'
-          }}
-        >
-          <Typography component="h2" sx={{fontSize: {xs: 20, sm: 20, md: 22, lg: 26}, fontWeight: "900"}} color="#2D3748">
+          }}>
+          <Typography component="h2" sx={{fontSize: {xs: 20, sm: 20, md: 22, lg: 26}, fontWeight: "900", }} color="#2D3748">
             Viandes bovines
           </Typography>
           <Typography variant="body1" sx={{textAlign: 'center', width: "100%", fontWeight: "500"}} color="#718096">

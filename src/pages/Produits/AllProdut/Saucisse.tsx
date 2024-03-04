@@ -1,5 +1,5 @@
-import {Grid, Typography} from '@mui/material';
-import {Box} from '@mui/system';
+import { Grid, Typography } from '@mui/material';
+import { Box } from '@mui/system';
 
 import SaucisseComponent from '../../../Components/produt/SaucisseComponent';
 import ProdutProps6 from '../../../props/produtProps/ProdutProps6';
@@ -13,7 +13,7 @@ export default function Saucisse() {
 
       <Box mb={5}
         sx={{
-          px: 2,
+          px: 2, mt: "75px",
           textAlign: "center", justifyContent: 'center'
         }}
       >

@@ -45,6 +45,7 @@ export default function BannerComponent({description, image, imageText, linkText
         <Grid item md={6} >
           <Box
             sx={{
+              mt: "75px",
               position: 'relative', textAlign: "start",
               p: {xs: 3, md: 6},
               pr: {md: 0},

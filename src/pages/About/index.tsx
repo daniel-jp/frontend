@@ -11,7 +11,7 @@ export default function index() {
   const propAbout = PropAbout();
   const aboutFeature = AboutFeatuereProp();
   return (
-    <Stack sx={{mt: "75px", }}>
+    <Stack>
 
       <Box>
         {

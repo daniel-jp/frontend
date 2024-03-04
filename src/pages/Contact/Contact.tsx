@@ -5,8 +5,7 @@ import ContactForm from '../../Components/contact/ContactForm';
 // Service.tsx
 export default function Contact() {
   return (
-    <Stack sx={{mt: "75px", }}>
-
+    <Stack>
       <ContactForm />
     </Stack>
   )

@@ -12,7 +12,7 @@ export default function Gourmand() {
 
       <Box mb={5}
         sx={{
-          px: 2,
+          px: 2, mt: "75px",
           textAlign: "center", justifyContent: 'center'
         }}
       >

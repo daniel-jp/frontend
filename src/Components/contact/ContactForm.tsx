@@ -36,7 +36,7 @@ const ContactForm = () => {
 
   return (
 
-    <Stack sx={{color: "#000"}}>
+    <Stack sx={{color: "#000", mt: "75px", }}>
 
       <Grid container spacing={2} sx={{mt: 8, mb: 3, borderRadius: 0, }}>
         <Grid item xs={12} md={6} sx={{borderRadius: 0, height: "100%"}}>
@@ -149,12 +149,14 @@ const ContactForm = () => {
       </Grid>
 
 
-      <Grid item xs={12} md={6} >
-        <Box style={{padding: '20px', }}>
+      <Grid item xs={12} md={6}>
+        <Box sx={{height: 600, p: 1}}>
           <LoadScript googleMapsApiKey="YOUR_API_KEY">
-            <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={6}>
+            <Stack>
+              <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={6}>
               <Marker position={center} />
-            </GoogleMap>
+              </GoogleMap>
+            </Stack>
           </LoadScript>
         </Box>
       </Grid>

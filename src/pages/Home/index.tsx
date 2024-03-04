@@ -31,7 +31,7 @@ export default function index() {
     <>
       {/*bgcolor={"#122134"}*/}
       <Box bgcolor="#fff" sx={{
-        justifyContent: "center", mt: "75px",
+        justifyContent: "center",
       }}>
 
         <Stack>
